@@ -3,6 +3,7 @@ import { ProfileHeader } from "@/components/profile-header";
 import CTA from "@/components/sections/cta";
 import ExperienceSection from "@/components/sections/experience";
 import Projects from "@/components/sections/projects";
+import { QuoteSection } from "@/components/sections/qoute";
 import { SkillsSection } from "@/components/sections/skills";
 
 export default function Home() {
@@ -19,6 +20,8 @@ export default function Home() {
         <SkillsSection />
         <div className="h-px bg-border my-4" />
         <CTA />
+        <div className="h-px bg-border my-4" />
+        <QuoteSection />
       </div>
     </div>
   );
