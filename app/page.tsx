@@ -2,15 +2,15 @@ import { Banner } from "@/components/banner";
 import { ProfileHeader } from "@/components/profile-header";
 import CTA from "@/components/sections/cta";
 import ExperienceSection from "@/components/sections/experience";
+import Footer from "@/components/sections/footer";
 import Projects from "@/components/sections/projects";
 import { QuoteSection } from "@/components/sections/qoute";
 import { SkillsSection } from "@/components/sections/skills";
-import SocialSections from "@/components/sections/social-sections";
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full">
-      <div className="max-w-3xl min-h-screen  w-full mx-auto border-x border-border pb-8">
+      <div className="max-w-3xl min-h-screen  w-full mx-auto border-x border-border pb-4">
         <Banner />
         <ProfileHeader />
         <div className="h-px bg-border my-4" />
@@ -21,10 +21,11 @@ export default function Home() {
         <SkillsSection />
         <div className="h-px bg-border my-4" />
         <CTA />
-        {/* <div className="h-px  my-2" /> */}
-        {/* <SocialSections /> */}
+
         <div className="h-px bg-border my-4" />
         <QuoteSection />
+        <div className="h-px bg-border my-4" />
+        <Footer />
       </div>
     </div>
   );

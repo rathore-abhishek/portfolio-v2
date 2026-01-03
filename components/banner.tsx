@@ -8,11 +8,11 @@ interface BannerSectionProps {
 }
 
 export function Banner({
-  quote = "You make your own luck if you stay at it long enough.",
-  bannerImage = "/banner.webp",
+  quote = "I am gonna be hokage one day.",
+  bannerImage = "/naruto.jpg",
 }: BannerSectionProps) {
   return (
-    <div className="w-full mb-2 relative">
+    <div className="w-full mb-2 relative mask-x-from-90% mask-radial-from-75% mask-b-from-95%">
       <div className="relative" style={{ height: "auto" }}>
         <Image
           alt="Banner"

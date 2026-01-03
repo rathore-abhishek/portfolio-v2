@@ -52,19 +52,25 @@ export function ProfileHeader({
           aria-label={name}
           style={{ backgroundImage: `url("${profileImage}")` }}
         />
-        <div className="text-white/40 text-xs sm:text-sm flex items-center gap-2">
-          <span className="font-medium">
-            <Clock />
-          </span>
-          {hourDiff !== 0 && (
-            <>
-              <span className="text-white/30 font-mono">
-                {hourDiff > 0
-                  ? `// ${Math.abs(hourDiff)}h ahead`
-                  : `// ${Math.abs(hourDiff)}h behind`}
-              </span>
-            </>
-          )}
+        <div className="flex flex-col gap-2">
+          <p className="flex items-center gap-2 text-xs font-medium font-mono w-fit ml-auto text-black/70 dark:text-white/70">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>{" "}
+            Available for work
+          </p>
+          <p className="text-black/40 dark:text-white/40 text-xs flex items-center gap-2 font-mono">
+            <span className="font-medium">
+              <Clock />
+            </span>
+            {hourDiff !== 0 && (
+              <>
+                <span className="text-white/30 font-mono">
+                  {hourDiff > 0
+                    ? `// ${Math.abs(hourDiff)}h ahead`
+                    : `// ${Math.abs(hourDiff)}h behind`}
+                </span>
+              </>
+            )}
+          </p>
         </div>
       </div>
       <div className="text-left sm:flex sm:justify-between sm:items-end w-full sm:px-8 px-4 flex-col sm:flex-row">

@@ -1,7 +1,4 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
 
 export const quotes = [
   {
@@ -36,7 +33,7 @@ export const QuoteSection = () => {
   return (
     <section className="px-8 relative">
       {/* Background Quote Mark */}
-      <div className="absolute left-4 top-4 md:left-8 md:top-12 opacity-[0.05] dark:opacity-[0.05] pointer-events-none">
+      <div className="absolute left-4 top-4 md:left-8 md:top-8 opacity-[0.05] dark:opacity-[0.05] pointer-events-none">
         <svg
           width="60"
           height="40"
