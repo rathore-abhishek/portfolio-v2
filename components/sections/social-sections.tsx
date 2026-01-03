@@ -1,66 +1,15 @@
-"use client";
-
-import Image from "next/image";
-import { ShinyButton } from "../ui/shiny-button";
+import React from "react";
 import Github from "../icons/github";
+import Instagram from "../icons/instagram";
 import X from "../icons/x";
 import LinkedIn from "../icons/linkedin";
 import Mail from "../icons/mail";
+import Image from "next/image";
 
-export default function CTA() {
+const SocialSections = () => {
   return (
-    <>
-      <div className="mt-6 w-full flex-col px-6 sm:flex sm:items-center sm:justify-between sm:px-12">
-        <p className="mb-4 text-center font-serif italic text-base opacity-50 sm:mb-3 md:text-xl">
-          If you&apos;ve read this far, you might be interested in what I do.
-        </p>
-        <div className="mt-4 flex w-full justify-center sm:mt-0 sm:w-auto sm:justify-end">
-          <a
-            href="https://cal.com/abhishek-rathore-oiio7l/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ShinyButton className="group bg-background text-foreground border-border py-2 px-3 h-auto">
-              <div className="relative z-20 flex items-center gap-2 transition-all duration-300 group-hover:gap-8">
-                <div className="h-5 w-5 shrink-0 overflow-hidden rounded-full">
-                  <Image
-                    alt={"Abhishek Rathore"}
-                    width={20}
-                    height={20}
-                    className="h-full w-full object-cover"
-                    src={"/me.jpg"}
-                  />
-                </div>
-                <div className="absolute left-[24px] flex -translate-x-full transform items-center gap-0 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-3 w-3"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5v14"></path>
-                  </svg>
-                  <div className="mr-2 ml-1 flex h-5 w-5 items-center justify-center rounded-full bg-black/10 text-[8px] dark:bg-white/10">
-                    You
-                  </div>
-                </div>
-                <span className="relative ml-0 block text-sm font-bold whitespace-nowrap transition-all duration-300 group-hover:ml-4 normal-case">
-                  Book a call
-                </span>
-              </div>
-            </ShinyButton>
-          </a>
-        </div>
-        <p className="text-center uppercase text-black/30 text-sm py-2 font-medium">
-          or
-        </p>
+    <section className="px-8">
+      <div className="w-full items-center justify-center">
         <div className="group flex items-center justify-center">
           <div
             className="p-2 rounded-lg border w-13 -rotate-20 -mr-1 group-hover:rotate-0 transition-all duration-300 group-hover:mr-2 bg-background cursor-pointer border-black/20 flex items-center gap-1 flex-col dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]
@@ -118,6 +67,8 @@ export default function CTA() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
-}
+};
+
+export default SocialSections;

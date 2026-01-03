@@ -5,6 +5,7 @@ import ExperienceSection from "@/components/sections/experience";
 import Projects from "@/components/sections/projects";
 import { QuoteSection } from "@/components/sections/qoute";
 import { SkillsSection } from "@/components/sections/skills";
+import SocialSections from "@/components/sections/social-sections";
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
         <SkillsSection />
         <div className="h-px bg-border my-4" />
         <CTA />
+        {/* <div className="h-px  my-2" /> */}
+        {/* <SocialSections /> */}
         <div className="h-px bg-border my-4" />
         <QuoteSection />
       </div>

@@ -55,23 +55,23 @@ const Instagram = (props: Props) => {
           r="52.3515"
         />
         <linearGradient id="d">
-          <stop offset="0" stop-color="#ff005f" />
-          <stop offset="1" stop-color="#fc01d8" />
+          <stop offset="0" stopColor="#ff005f" />
+          <stop offset="1" stopColor="#fc01d8" />
         </linearGradient>
         <linearGradient id="c">
-          <stop offset="0" stop-color="#780cff" />
-          <stop stop-color="#820bff" offset="1" stop-opacity="0" />
+          <stop offset="0" stopColor="#780cff" />
+          <stop stopColor="#820bff" offset="1" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="b">
-          <stop offset="0" stop-color="#fc0" />
-          <stop offset="1" stop-color="#fc0" stop-opacity="0" />
+          <stop offset="0" stopColor="#fc0" />
+          <stop offset="1" stopColor="#fc0" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="a">
-          <stop offset="0" stop-color="#fc0" />
-          <stop offset=".1242" stop-color="#fc0" />
-          <stop offset=".5672" stop-color="#fe4a05" />
-          <stop offset=".6942" stop-color="#ff0f3f" />
-          <stop offset="1" stop-color="#fe0657" stop-opacity="0" />
+          <stop offset="0" stopColor="#fc0" />
+          <stop offset=".1242" stopColor="#fc0" />
+          <stop offset=".5672" stopColor="#fe4a05" />
+          <stop offset=".6942" stopColor="#ff0f3f" />
+          <stop offset="1" stopColor="#fe0657" stopOpacity="0" />
         </linearGradient>
       </defs>
       <g>
