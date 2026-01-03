@@ -1,6 +1,12 @@
-export default function NextJS() {
+"use client";
+
+import React from "react";
+
+type Props = React.ComponentProps<"svg">;
+
+const NextJS = (props: Props) => {
   return (
-    <svg viewBox="0 0 128 128" className="size-4 shrink-0">
+    <svg viewBox="0 0 128 128" className="size-4 shrink-0" {...props}>
       <circle cx="64" cy="64" r="64"></circle>
       <path
         fill="url(#a)"
@@ -35,4 +41,6 @@ export default function NextJS() {
       </defs>
     </svg>
   );
-}
+};
+
+export default NextJS;

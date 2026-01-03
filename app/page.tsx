@@ -3,6 +3,7 @@ import { ProfileHeader } from "@/components/profile-header";
 import CTA from "@/components/sections/cta";
 import ExperienceSection from "@/components/sections/experience";
 import Projects from "@/components/sections/projects";
+import { SkillsSection } from "@/components/sections/skills";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
         <ExperienceSection />
         <div className="h-px bg-border my-4" />
         <Projects />
+        <div className="h-px bg-border my-4" />
+        <SkillsSection />
         <div className="h-px bg-border my-4" />
         <CTA />
       </div>
