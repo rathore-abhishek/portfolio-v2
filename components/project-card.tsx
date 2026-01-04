@@ -15,6 +15,7 @@ interface ProjectProps {
   description: string;
   image: string;
   techStack: TechItem[];
+  link: string;
 }
 
 const ProjectCard = ({
@@ -22,11 +23,14 @@ const ProjectCard = ({
   description,
   image,
   techStack,
+  link,
 }: ProjectProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   return (
-    <div
+    <a
+      href={link}
+      target="_blank"
       className="flex flex-col gap-4 group dark:hover:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]
  hover:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-shadow duration-300 pb-4 rounded-lg cursor-pointer"
     >
@@ -169,7 +173,7 @@ const ProjectCard = ({
           </div>
         )}
       </div>
-    </div>
+    </a>
   );
 };
 

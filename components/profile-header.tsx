@@ -34,11 +34,10 @@ export function ProfileHeader({
   name = "Abhishek Rathore",
   profileImage = "/me.jpg",
   socialLinks = {
-    twitter: "https://x.com/code_kartik",
-    github: "https://github.com/KartikLabhshetwar",
-    linkedin: "https://www.linkedin.com/in/kartikcode/",
-    resume:
-      "https://drive.google.com/file/d/1U8450r8Qsf9Xo1IcQhMdSrdzFY2__JXP/view?usp=sharing",
+    twitter: "https://x.com/abhiishekz",
+    github: "https://github.com/rathore-abhishek",
+    linkedin: "https://www.linkedin.com/in/rathore-abhishekk/",
+    resume: "https://www.instagram.com/rathore.abhishekk",
   },
 }: ProfileHeaderProps) {
   const hourDiff = calculateTimeZoneDifferenceInHours();
@@ -52,25 +51,26 @@ export function ProfileHeader({
           aria-label={name}
           style={{ backgroundImage: `url("${profileImage}")` }}
         />
-        <div className="flex flex-col gap-2">
-          <p className="flex items-center gap-2 text-xs font-medium font-mono w-fit ml-auto text-black/70 dark:text-white/70">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>{" "}
+        <div className="flex flex-col gap-1 items-end shrink-0">
+          <p className="flex items-center gap-1.5 text-[10px] sm:text-xs font-medium font-mono text-black/70 dark:text-white/70 whitespace-nowrap">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
             Available for work
           </p>
-          <p className="text-black/40 dark:text-white/40 text-xs flex items-center gap-2 font-mono">
+          <div className="text-black/40 dark:text-white/40 text-[10px] sm:text-xs flex flex-col items-end font-mono">
             <span className="font-medium">
               <Clock />
             </span>
             {hourDiff !== 0 && (
-              <>
-                <span className="text-white/30 font-mono">
-                  {hourDiff > 0
-                    ? `// ${Math.abs(hourDiff)}h ahead`
-                    : `// ${Math.abs(hourDiff)}h behind`}
-                </span>
-              </>
+              <span className="text-black/20 dark:text-white/20 text-[9px] sm:text-[10px]">
+                {hourDiff > 0
+                  ? `// ${Math.abs(hourDiff)}h ahead`
+                  : `// ${Math.abs(hourDiff)}h behind`}
+              </span>
             )}
-          </p>
+          </div>
         </div>
       </div>
       <div className="text-left sm:flex sm:justify-between sm:items-end w-full sm:px-8 px-4 flex-col sm:flex-row">
@@ -257,14 +257,25 @@ export function ProfileHeader({
         </span>
       </div>
       <div className=" flex items-center px-4 sm:px-8 mt-4">
-        <Button variant="outline" className="" size={"sm"}>
-          <DM className="opacity-40" /> Twitter DM
+        <Button variant="outline" className="" size={"sm"} asChild>
+          <a
+            href="https://x.com/messages/compose?recipient_id=1828108311901966337"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <DM className="opacity-40" /> Twitter DM
+          </a>
         </Button>
         <span className="mx-1 text-xs text-black/20 dark:text-white/20 font-medium">
           OR
         </span>
-        <Button variant="outline" size={"sm"}>
-          <Mail className="opacity-40" /> Email
+        <Button variant="outline" size={"sm"} asChild>
+          <a
+            href="mailto:rathore.abhiishekk@gmail.com"
+            rel="noopener noreferrer"
+          >
+            <Mail className="opacity-40" /> Email
+          </a>
         </Button>
       </div>
     </div>

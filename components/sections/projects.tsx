@@ -5,6 +5,7 @@ import NextJS from "../icons/nextjs";
 import TailwindCSS from "../icons/tailwind";
 import Supabase from "../icons/supabase";
 import TanstackQuery from "../icons/tanstack-query";
+import Drizzle from "../icons/drizzle";
 
 const ProjectsSection = () => {
   const projects = [
@@ -17,8 +18,8 @@ const ProjectsSection = () => {
       techStack: [
         { id: "nextjs", label: "Next.js", icon: <NextJS /> },
         { id: "tailwind", label: "Tailwind", icon: <TailwindCSS /> },
-        { id: "framer", label: "Motion", image: "/skills/motion.png" },
-        { id: "sanity", label: "Sanity", image: "/skills/sanity.png" },
+        { id: "motion", label: "Motion", image: "/skills/motion.png" },
+        { id: "drizzle", label: "Drizzle", icon: <Drizzle /> },
         {
           id: "tanstack-query",
           label: "TanStack Query",
@@ -27,6 +28,7 @@ const ProjectsSection = () => {
         { id: "zod", label: "Zod" },
         { id: "tanstack-forms", label: "TanStack Forms" },
       ],
+      link: "https://rvyu.vercel.app/",
     },
     {
       id: "theleansuite",
@@ -37,7 +39,7 @@ const ProjectsSection = () => {
       techStack: [
         { id: "nextjs", label: "Next.js", icon: <NextJS /> },
         { id: "tailwind", label: "Tailwind", icon: <TailwindCSS /> },
-        { id: "framer", label: "Motion", image: "/skills/motion.png" },
+        { id: "motion", label: "Motion", image: "/skills/motion.png" },
         { id: "sanity", label: "Sanity", image: "/skills/sanity.png" },
         {
           id: "tanstack-query",
@@ -47,6 +49,7 @@ const ProjectsSection = () => {
         { id: "zod", label: "Zod" },
         { id: "tanstack-forms", label: "TanStack Forms" },
       ],
+      link: "https://theleansuite.com/",
     },
     {
       id: "spf-logistics",
@@ -58,7 +61,7 @@ const ProjectsSection = () => {
         { id: "nextjs", label: "Next.js", icon: <NextJS /> },
         { id: "supabase", label: "Supabase", icon: <Supabase /> },
         { id: "tailwind", label: "Tailwind", icon: <TailwindCSS /> },
-        { id: "framer", label: "Motion", image: "/skills/motion.png" },
+        { id: "motion", label: "Motion", image: "/skills/motion.png" },
         {
           id: "tanstack-query",
           label: "TanStack Query",
@@ -67,6 +70,7 @@ const ProjectsSection = () => {
         { id: "zod", label: "Zod" },
         { id: "tanstack-forms", label: "TanStack Forms" },
       ],
+      link: "https://spflogistics.com.au",
     },
   ];
 
@@ -83,10 +87,11 @@ const ProjectsSection = () => {
             description={project.description}
             image={project.image}
             techStack={project.techStack}
+            link={project.link}
           />
         ))}
       </div>
-      <h5 className="mt-4 bg-linear-to-r py-1 from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-center font-neu text-4xl font-extrabold text-transparent opacity-30 md:text-6xl">
+      <h5 className="mt-4 bg-linear-to-r py-1 from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-center font-neu text-3xl whitespace-nowrap font-extrabold text-transparent opacity-30 md:text-6xl">
         Shipping More Soon
       </h5>
     </section>

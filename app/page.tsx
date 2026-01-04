@@ -21,8 +21,8 @@ export default function Home() {
         <Projects />
         <div className="h-px bg-border my-4" />
         <SkillsSection />
-        <div className="h-px bg-border my-4" />
-        <Blogs />
+        {/* <div className="h-px bg-border my-4" />
+        <Blogs /> */}
         <div className="h-px bg-border my-4" />
         <CTA />
         <div className="h-px bg-border my-4" />

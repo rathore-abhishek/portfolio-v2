@@ -10,7 +10,7 @@ const ExperienceSection = () => {
   return (
     <section className="px-8">
       <h2 className="font-serif text-xl text-black/50 dark:text-white/40 mb-2">
-        Professiooonal Experience
+        Professional Experience
       </h2>
       <div
         className={cn(
@@ -19,10 +19,10 @@ const ExperienceSection = () => {
       >
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="flex justify-between items-center cursor-pointer"
+          className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 cursor-pointer"
         >
           <div className="flex items-center gap-4">
-            <div className="rounded-full w-14 h-14 overflow-hidden border border-black/10 dark:border-white/10 shrink-0">
+            <div className="rounded-full w-12 h-12 sm:w-14 sm:h-14 overflow-hidden border border-black/10 dark:border-white/10 shrink-0">
               <Image
                 src="/angrio.jpeg"
                 alt="Angrio Technologies"
@@ -31,31 +31,31 @@ const ExperienceSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-2">
-                <h3 className="font-bold text-base whitespace-nowrap text-black dark:text-white">
+                <h3 className="font-bold text-sm sm:text-base truncate text-black dark:text-white">
                   Angrio Technologies
                 </h3>
                 <ArrowUp
                   className={cn(
-                    "size-4 text-black/50 dark:text-white/50 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-1",
+                    "size-3.5 sm:size-4 text-black/50 dark:text-white/50 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 shrink-0",
                     isOpen
                       ? "rotate-180 opacity-100 translate-x-1"
                       : "rotate-90"
                   )}
                 />
               </div>
-              <p className="text-sm text-black/50 dark:text-white/40 font-medium">
+              <p className="text-xs sm:text-sm text-black/50 dark:text-white/40 font-medium whitespace-nowrap">
                 Full-Stack Developer
               </p>
             </div>
           </div>
-          <div className="hidden sm:flex flex-col gap-1 text-end">
-            <p className="font-medium text-black/50 dark:text-white/50 text-sm inline-flex items-center gap-2 justify-end">
-              <span className="w-20 h-px bg-linear-to-l dark:from-white/10 from-black/10 to-transparent"></span>
+          <div className="flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-1 text-start sm:text-end sm:ml-auto">
+            <p className="font-medium text-black/50 dark:text-white/50 text-[10px] sm:text-sm inline-flex items-center gap-2 sm:justify-end">
+              <span className="hidden sm:block w-12 md:w-20 h-px bg-linear-to-l dark:from-white/10 from-black/10 to-transparent"></span>
               Jan 2025 - Dec 2025
             </p>
-            <p className="text-black/30 dark:text-white/30 text-xs">
+            <p className="text-black/30 dark:text-white/30 text-[10px] sm:text-xs tracking-tight normal-case">
               India, Remote
             </p>
           </div>

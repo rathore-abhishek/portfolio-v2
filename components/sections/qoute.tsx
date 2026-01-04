@@ -33,7 +33,7 @@ export const QuoteSection = () => {
   return (
     <section className="px-8 relative">
       {/* Background Quote Mark */}
-      <div className="absolute left-4 top-4 md:left-8 md:top-8 opacity-[0.05] dark:opacity-[0.05] pointer-events-none">
+      <div className="absolute left-8 bottom-0 opacity-[0.05] dark:opacity-[0.05] pointer-events-none">
         <svg
           width="60"
           height="40"

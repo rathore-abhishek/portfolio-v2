@@ -8,6 +8,7 @@ const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
   weight: ["400"],
   subsets: ["latin"],
+  style: ["italic", "normal"],
 });
 
 const manrope = Manrope({

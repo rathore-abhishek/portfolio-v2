@@ -61,7 +61,10 @@ export default function CTA() {
         or
       </p>
       <div className="group flex items-center justify-center">
-        <div
+        <a
+          href="https://github.com/rathore-abhishek"
+          target="_blank"
+          rel="noopener noreferrer"
           className="p-2 rounded-lg border w-13 -rotate-20 -mr-1 group-hover:rotate-0 transition-all duration-300 group-hover:mr-2 bg-background cursor-pointer border-black/20 flex items-center gap-1 flex-col dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]
  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
         >
@@ -69,9 +72,12 @@ export default function CTA() {
           <p className="text-black/50 dark:text-white/50 font-bold text-[8px] ">
             Github
           </p>
-        </div>
+        </a>
 
-        <div
+        <a
+          href="https://www.instagram.com/rathore.abhishekk"
+          target="_blank"
+          rel="noopener noreferrer"
           className="p-2 rounded-lg border w-13 -rotate-10 -mr-1 group-hover:rotate-0 transition-all duration-300 group-hover:mr-2 bg-background cursor-pointer border-black/20 flex items-center gap-0.5 flex-col dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]
  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
         >
@@ -87,8 +93,11 @@ export default function CTA() {
           <p className="text-black/50 dark:text-white/50 font-bold text-[8px] ">
             Instagram
           </p>
-        </div>
-        <div
+        </a>
+        <a
+          href="https://x.com/abhiishekz"
+          target="_blank"
+          rel="noopener noreferrer"
           className="p-2 rounded-lg border w-13 -rotate-2 z-5 -mr-1 group-hover:rotate-0 transition-all duration-300 group-hover:mr-2 bg-background cursor-pointer border-black/20 flex items-center gap-0.5 flex-col dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]
  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
         >
@@ -96,8 +105,11 @@ export default function CTA() {
           <p className="text-black/50 dark:text-white/50 font-bold text-[8px] ">
             Twitter
           </p>
-        </div>
-        <div
+        </a>
+        <a
+          href="https://www.linkedin.com/in/rathore-abhishekk/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="p-2 rounded-lg border w-13 -mr-1 z-2 group-hover:rotate-0 transition-all duration-300 group-hover:mr-2 bg-background cursor-pointer rotate-10 border-black/20 flex items-center gap-0.5 flex-col dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]
  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
         >
@@ -105,8 +117,9 @@ export default function CTA() {
           <p className="text-black/50 dark:text-white/50 font-bold text-[8px] ">
             LinkedIn
           </p>
-        </div>
-        <div
+        </a>
+        <a
+          href="mailto:rathore.abhiishekk@gmail.com"
           className="p-2 rounded-lg border w-13 -mr-1 z-1 group-hover:rotate-0 transition-all duration-300 group-hover:mr-2 bg-background cursor-pointer rotate-20 border-black/20 flex items-center gap-0.5 flex-col dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]
  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
         >
@@ -114,7 +127,7 @@ export default function CTA() {
           <p className="text-black/50 dark:text-white/50 font-bold text-[8px]">
             Mail
           </p>
-        </div>
+        </a>
       </div>
     </div>
   );

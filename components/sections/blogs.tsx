@@ -3,6 +3,8 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import React from "react";
+import { Button } from "../ui/button";
+import Share from "../icons/share";
 
 const BLOG_POSTS = [
   {
@@ -100,6 +102,10 @@ export const Blogs = () => {
         <h2 className="font-serif text-xl text-black/50 dark:text-white/40 italic">
           My Thoughts
         </h2>
+
+        <a className="text-white/30 text-xs font-semibold inline-flex gap-1 items-center hover:text-white transition-colors duration-200 cursor-pointer">
+          ALL <Share />
+        </a>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
