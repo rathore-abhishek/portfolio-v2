@@ -17,16 +17,18 @@ export function Clock() {
   }, []); // The empty dependency array ensures this effect runs only once on mount
 
   // 4. Render the formatted time in "03/01/2025, 11:54:20 PM IST" format
-  const formattedTime = currentTime.toLocaleString("en-IN", {
-    timeZone: "Asia/Kolkata",
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
-  });
+  const formattedTime = currentTime
+    .toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+    })
+    .toUpperCase();
 
   return `${formattedTime} IST.`;
 }
