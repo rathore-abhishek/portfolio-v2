@@ -31,6 +31,23 @@ const neu = localFont({
 
 export const metadata: Metadata = {
   title: "Abhishek Rathore",
+  description:
+    "I build cool things from zero. Full-stack developer focused on clean interfaces, smooth animations, and shipping modern experiences.",
+  openGraph: {
+    title: "Abhishek Rathore",
+    description:
+      "I build cool things from zero. Full-stack developer focused on clean interfaces, smooth animations, and shipping modern experiences.",
+    type: "website",
+    locale: "en",
+    siteName: "Abhishek Rathore",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abhishek Rathore",
+    description:
+      "I build cool things from zero. Full-stack developer shipping modern experiences.",
+    creator: "@abhiishekz",
+  },
 };
 
 export default function RootLayout({
