@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function CloudBackground() {
   return (
-    <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden dark:hidden">
+    <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden dark:hidden 2xl:block hidden">
       {/* Top Left Cluster */}
       <div className="absolute top-[-10%] left-[-15%] w-[800px] h-[600px] opacity-60">
         <div className="relative w-full h-full">

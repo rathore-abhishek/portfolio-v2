@@ -6,6 +6,7 @@ import TailwindCSS from "../icons/tailwind";
 import Supabase from "../icons/supabase";
 import TanstackQuery from "../icons/tanstack-query";
 import Drizzle from "../icons/drizzle";
+import Sanity from "../icons/sanity";
 
 const ProjectsSection = () => {
   const projects = [
@@ -40,7 +41,7 @@ const ProjectsSection = () => {
         { id: "nextjs", label: "Next.js", icon: <NextJS /> },
         { id: "tailwind", label: "Tailwind", icon: <TailwindCSS /> },
         { id: "motion", label: "Motion", image: "/skills/motion.png" },
-        { id: "sanity", label: "Sanity", image: "/skills/sanity.png" },
+        { id: "sanity", label: "Sanity", icon: <Sanity /> },
         {
           id: "tanstack-query",
           label: "TanStack Query",

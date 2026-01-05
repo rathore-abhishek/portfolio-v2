@@ -17,6 +17,7 @@ import Docker from "../icons/docker";
 import Figma from "../icons/figma";
 import Drizzle from "../icons/drizzle";
 import Prisma from "../icons/prisma";
+import Sanity from "../icons/sanity";
 
 interface Skill {
   name: string;
@@ -32,6 +33,7 @@ const skills: Skill[] = [
   { name: "Supabase", icon: Supabase },
   { name: "Drizzle", icon: Drizzle },
   { name: "Prisma", icon: Prisma },
+  { name: "Sanity", icon: Sanity },
   { name: "Framer Motion", image: "/skills/motion.png" },
   { name: "Docker", icon: Docker },
   { name: "Git", icon: Git },
@@ -45,7 +47,7 @@ export const SkillsSection = () => {
         Stack I use
       </h2>
       <TooltipProvider>
-        <div className="flex flex-wrap gap-6 items-center">
+        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-8 justify-items-center md:justify-items-start">
           {skills.map((skill) => (
             <Tooltip key={skill.name}>
               <TooltipTrigger asChild>

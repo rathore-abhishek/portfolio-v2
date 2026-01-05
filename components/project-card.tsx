@@ -57,7 +57,7 @@ const ProjectCard = ({
               return (
                 <motion.div
                   key={tech.id}
-                  className="bg-black/5 dark:bg-white/5 flex h-7 cursor-pointer items-center rounded-full border border-black/5 dark:border-white/5 shadow-sm"
+                  className="bg-white dark:bg-white/5 flex h-7 cursor-pointer items-center rounded-full border border-black/5 dark:border-white/5 shadow-sm"
                   style={{
                     marginLeft: "-8px",
                     zIndex: isHovered ? 10 : 1,
@@ -122,7 +122,7 @@ const ProjectCard = ({
             })}
             {techStack.length > 5 && (
               <motion.div
-                className="bg-black/5 dark:bg-white/5 text-muted-foreground hover:bg-accent flex h-7 cursor-pointer items-center rounded-full border border-black/5 dark:border-white/5 text-[10px] font-medium shadow-sm"
+                className="bg-white dark:bg-white/5 text-black/40 dark:text-white/40 hover:bg-white flex h-7 cursor-pointer items-center rounded-full border border-black/5 dark:border-white/5 text-[10px] font-medium shadow-sm"
                 style={{
                   marginLeft: "-8px",
                   zIndex: hoveredTech === "more" ? 10 : 1,
@@ -139,7 +139,7 @@ const ProjectCard = ({
                 }}
               >
                 <div className="flex h-7 w-7 shrink-0 items-center justify-center">
-                  <span className="text-[10px] font-semibold text-black dark:text-white">
+                  <span className="text-[10px] font-semibold text-black/60 dark:text-white/60">
                     +{techStack.length - 5}
                   </span>
                 </div>
