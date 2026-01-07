@@ -7,7 +7,6 @@ import Projects from "@/components/sections/projects";
 import { QuoteSection } from "@/components/sections/qoute";
 import { SkillsSection } from "@/components/sections/skills";
 import { CloudBackground } from "@/components/cloud-background";
-import Blogs from "@/components/sections/blogs";
 
 export default function Home() {
   return (
