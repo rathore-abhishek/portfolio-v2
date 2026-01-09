@@ -31,33 +31,32 @@ const ProjectCard = ({
     <a
       href={link}
       target="_blank"
-      className="flex flex-col gap-4 group dark:hover:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]
- hover:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-shadow duration-300 pb-4 rounded-lg cursor-pointer"
+      className="group flex cursor-pointer flex-col gap-4 rounded-lg pb-4 transition-shadow duration-300 hover:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:hover:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
     >
-      <div className="rounded-lg overflow-hidden aspect-60/40 group-hover:scale-[1.05] transition-all duration-300">
+      <div className="aspect-60/40 overflow-hidden rounded-lg transition-all duration-300 group-hover:scale-[1.05]">
         <Image
           src={image}
           alt={title}
           width={400}
           height={400}
-          className="object-cover w-full h-full"
+          className="h-full w-full object-cover"
         />
       </div>
-      <div className="flex flex-col gap-1 group-hover:translate-x-4 duration-300 transition-all">
-        <h4 className="text-black dark:text-white text-base font-semibold">
+      <div className="flex flex-col gap-1 transition-all duration-300 group-hover:translate-x-4">
+        <h4 className="text-base font-semibold text-black dark:text-white">
           {title}
         </h4>
-        <p className="text-black/50 dark:text-white/50 text-sm w-48">
+        <p className="w-48 text-sm text-black/50 dark:text-white/50">
           {description}
         </p>
         {!false && techStack && techStack.length > 0 && (
-          <div className="flex items-center mt-auto">
+          <div className="mt-auto flex items-center">
             {techStack.slice(0, 4).map((tech) => {
               const isHovered = hoveredTech === tech.id;
               return (
                 <motion.div
                   key={tech.id}
-                  className="bg-white dark:bg-white/5 flex h-7 cursor-pointer items-center rounded-full border border-black/5 dark:border-white/5 shadow-sm"
+                  className="flex h-7 cursor-pointer items-center rounded-full border border-black/5 bg-white shadow-sm dark:border-white/5 dark:bg-white/5"
                   style={{
                     marginLeft: "-8px",
                     zIndex: isHovered ? 10 : 1,
@@ -75,7 +74,7 @@ const ProjectCard = ({
                 >
                   <div className="flex h-7 w-7 shrink-0 items-center justify-center">
                     {tech.icon ? (
-                      <div className="h-4 w-4 flex items-center justify-center">
+                      <div className="flex h-4 w-4 items-center justify-center">
                         {tech.icon}
                       </div>
                     ) : tech.image ? (
@@ -122,7 +121,7 @@ const ProjectCard = ({
             })}
             {techStack.length > 5 && (
               <motion.div
-                className="bg-white dark:bg-white/5 text-black/40 dark:text-white/40 hover:bg-white flex h-7 cursor-pointer items-center rounded-full border border-black/5 dark:border-white/5 text-[10px] font-medium shadow-sm"
+                className="flex h-7 cursor-pointer items-center rounded-full border border-black/5 bg-white text-[10px] font-medium text-black/40 shadow-sm hover:bg-white dark:border-white/5 dark:bg-white/5 dark:text-white/40"
                 style={{
                   marginLeft: "-8px",
                   zIndex: hoveredTech === "more" ? 10 : 1,

@@ -43,27 +43,27 @@ const skills: Skill[] = [
 export const SkillsSection = () => {
   return (
     <section className="px-8">
-      <h2 className="font-serif text-xl text-black/50 dark:text-white/40 mb-6">
+      <h2 className="mb-6 font-serif text-xl text-black/50 dark:text-white/40">
         Stack I use
       </h2>
       <TooltipProvider>
-        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-8 justify-items-center md:justify-items-start">
+        <div className="grid grid-cols-4 justify-items-center gap-8 sm:grid-cols-6 md:grid-cols-8 md:justify-items-start lg:grid-cols-12">
           {skills.map((skill) => (
             <Tooltip key={skill.name}>
               <TooltipTrigger asChild>
                 <div className="group relative flex items-center justify-center transition-all duration-300 hover:scale-110">
                   {skill.icon ? (
-                    <skill.icon className="w-8 h-8 md:w-10 md:h-10 text-black dark:text-white" />
+                    <skill.icon className="h-8 w-8 text-black md:h-10 md:w-10 dark:text-white" />
                   ) : skill.image ? (
                     <Image
                       src={skill.image}
                       alt={skill.name}
                       width={40}
                       height={40}
-                      className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                      className="h-8 w-8 object-contain md:h-10 md:w-10"
                     />
                   ) : (
-                    <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center font-bold text-[10px] border border-black/10 dark:border-white/10 rounded-lg">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-black/10 text-[10px] font-bold md:h-10 md:w-10 dark:border-white/10">
                       {skill.name.substring(0, 2).toUpperCase()}
                     </div>
                   )}

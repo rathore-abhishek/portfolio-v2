@@ -152,15 +152,15 @@
   --shadow-xs: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
   --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
   --shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-  --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1),
-    0 2px 4px -2px hsl(0 0% 0% / 0.1);
-  --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1),
-    0 4px 6px -4px hsl(0 0% 0% / 0.1);
-  --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1),
-    0 8px 10px -6px hsl(0 0% 0% / 0.1);
+  --shadow-md:
+    0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+  --shadow-xl:
+    0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 8px 10px -6px hsl(0 0% 0% / 0.1);
   --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
-  --shadow-aceternity: 0px 2px 3px -1px rgba(0, 0, 0, 0.1),
-    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+  --shadow-aceternity:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02),
     0px 0px 0px 1px rgba(25, 28, 33, 0.08);
   --tracking-normal: -0.025em;
   --pattern-fg: color-mix(in oklch, var(--color-gray-950), transparent 95%);
@@ -212,12 +212,12 @@
   --shadow-xs: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
   --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
   --shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.4), 0 1px 2px -1px hsl(0 0% 0% / 0.4);
-  --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4),
-    0 2px 4px -2px hsl(0 0% 0% / 0.4);
-  --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4),
-    0 4px 6px -4px hsl(0 0% 0% / 0.4);
-  --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.4),
-    0 8px 10px -6px hsl(0 0% 0% / 0.4);
+  --shadow-md:
+    0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -2px hsl(0 0% 0% / 0.4);
+  --shadow-lg:
+    0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -4px hsl(0 0% 0% / 0.4);
+  --shadow-xl:
+    0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 8px 10px -6px hsl(0 0% 0% / 0.4);
   --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
   --pattern-fg: color-mix(in oklch, white, transparent 90%);
 }
@@ -245,7 +245,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground selection:bg-[#FF1F57] font-sans selection:text-white;
+    @apply bg-background text-foreground font-sans selection:bg-[#FF1F57] selection:text-white;
   }
   .skill-inner-shadow {
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);

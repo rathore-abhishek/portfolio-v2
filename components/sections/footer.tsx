@@ -1,16 +1,16 @@
 const Footer = () => {
   return (
-    <section className="px-8 flex flex-col sm:flex-row justify-between items-center">
+    <section className="flex flex-col items-center justify-between px-8 sm:flex-row">
       <p className="text-sm text-black/40 dark:text-white/40">
         © 2026 All rights reserved.
       </p>
-      <p className="text-sm text-black/40 dark:text-white/40 font-medium">
+      <p className="text-sm font-medium text-black/40 dark:text-white/40">
         Designed{" "}
-        <span className="font-serif text-black dark:text-white italic text-lg">
+        <span className="font-serif text-lg text-black italic dark:text-white">
           &
         </span>{" "}
         Developed by{" "}
-        <span className="text-black dark:text-white font-semibold">
+        <span className="font-semibold text-black dark:text-white">
           Abhishek
         </span>
       </p>

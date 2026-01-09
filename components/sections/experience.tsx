@@ -9,20 +9,20 @@ const ExperienceSection = () => {
 
   return (
     <section className="px-8">
-      <h2 className="font-serif text-xl text-black/50 dark:text-white/40 mb-2">
+      <h2 className="mb-2 font-serif text-xl text-black/50 dark:text-white/40">
         Professional Experience
       </h2>
       <div
         className={cn(
-          "mt-4 group hover:border-black/5 dark:hover:border-white/5 rounded-2xl transition-all duration-300"
+          "group mt-4 rounded-2xl transition-all duration-300 hover:border-black/5 dark:hover:border-white/5",
         )}
       >
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 cursor-pointer"
+          className="flex cursor-pointer flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
         >
           <div className="flex items-center gap-4">
-            <div className="rounded-full w-12 h-12 sm:w-14 sm:h-14 overflow-hidden border border-black/10 dark:border-white/10 shrink-0">
+            <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full border border-black/10 sm:h-14 sm:w-14 dark:border-white/10">
               <Image
                 src="/angrio.jpeg"
                 alt="Angrio Technologies"
@@ -31,31 +31,31 @@ const ExperienceSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="flex flex-col min-w-0">
+            <div className="flex min-w-0 flex-col">
               <div className="flex items-center gap-2">
-                <h3 className="font-bold text-sm sm:text-base truncate text-black dark:text-white">
+                <h3 className="truncate text-sm font-bold text-black sm:text-base dark:text-white">
                   Angrio Technologies
                 </h3>
                 <ArrowUp
                   className={cn(
-                    "size-3.5 sm:size-4 text-black/50 dark:text-white/50 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 shrink-0",
+                    "size-3.5 shrink-0 text-black/50 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100 sm:size-4 dark:text-white/50",
                     isOpen
-                      ? "rotate-180 opacity-100 translate-x-1"
-                      : "rotate-90"
+                      ? "translate-x-1 rotate-180 opacity-100"
+                      : "rotate-90",
                   )}
                 />
               </div>
-              <p className="text-xs sm:text-sm text-black/50 dark:text-white/40 font-medium whitespace-nowrap">
+              <p className="text-xs font-medium whitespace-nowrap text-black/50 sm:text-sm dark:text-white/40">
                 Full-Stack Developer
               </p>
             </div>
           </div>
-          <div className="flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-1 text-start sm:text-end sm:ml-auto">
-            <p className="font-medium text-black/50 dark:text-white/50 text-[10px] sm:text-sm inline-flex items-center gap-2 sm:justify-end">
-              <span className="hidden sm:block w-12 md:w-20 h-px bg-linear-to-l dark:from-white/10 from-black/10 to-transparent"></span>
+          <div className="flex flex-row items-center justify-between gap-1 text-start sm:ml-auto sm:flex-col sm:items-end sm:justify-center sm:text-end">
+            <p className="inline-flex items-center gap-2 text-[10px] font-medium text-black/50 sm:justify-end sm:text-sm dark:text-white/50">
+              <span className="hidden h-px w-12 bg-linear-to-l from-black/10 to-transparent sm:block md:w-20 dark:from-white/10"></span>
               Jan 2025 - Dec 2025
             </p>
-            <p className="text-black/30 dark:text-white/30 text-[10px] sm:text-xs tracking-tight normal-case">
+            <p className="text-[10px] tracking-tight text-black/30 normal-case sm:text-xs dark:text-white/30">
               India, Remote
             </p>
           </div>
@@ -66,12 +66,12 @@ const ExperienceSection = () => {
           className={cn(
             "grid transition-all duration-500 ease-in-out",
             isOpen
-              ? "grid-rows-[1fr] opacity-100 mt-6"
-              : "grid-rows-[0fr] opacity-0"
+              ? "mt-6 grid-rows-[1fr] opacity-100"
+              : "grid-rows-[0fr] opacity-0",
           )}
         >
           <div className="overflow-hidden">
-            <div className="space-y-4 text-sm md:text-base leading-relaxed text-black/70 dark:text-white/70">
+            <div className="space-y-4 text-sm leading-relaxed text-black/70 md:text-base dark:text-white/70">
               <p>
                 Started as an <span className="font-semibold">Intern</span> on
                 January 18, 2025, focused on crafting responsive and
@@ -88,9 +88,9 @@ const ExperienceSection = () => {
                   "Built scalable full-stack features with Supabase for real-time data persistence and authentication.",
                   "Engineered a core browser extension for 'Trakkar.in' (Company SaaS) to handle automated time tracking and cross-browser screenshot capture.",
                 ].map((item, i) => (
-                  <li key={i} className="flex gap-3 items-center">
-                    <span className="size-1.5 rounded-full bg-black/40 dark:bg-white/40  shrink-0" />
-                    <p className="text-black/50 dark:text-white/50 text-base">
+                  <li key={i} className="flex items-center gap-3">
+                    <span className="size-1.5 shrink-0 rounded-full bg-black/40 dark:bg-white/40" />
+                    <p className="text-base text-black/50 dark:text-white/50">
                       {item}
                     </p>
                   </li>

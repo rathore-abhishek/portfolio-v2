@@ -31,9 +31,9 @@ const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
 export const QuoteSection = () => {
   return (
-    <section className="px-8 relative">
+    <section className="relative px-8">
       {/* Background Quote Mark */}
-      <div className="absolute left-8 bottom-0 opacity-[0.05] dark:opacity-[0.05] pointer-events-none">
+      <div className="pointer-events-none absolute bottom-0 left-8 opacity-[0.05] dark:opacity-[0.05]">
         <svg
           width="60"
           height="40"
@@ -47,12 +47,12 @@ export const QuoteSection = () => {
 
       <div className="relative z-10 flex flex-col justify-center">
         <div className="flex flex-col">
-          <p className="font-serif text-lg text-black/40 dark:text-white/40 italic leading-relaxed">
+          <p className="font-serif text-lg leading-relaxed text-black/40 italic dark:text-white/40">
             &quot;{quote.quote}&quot;
           </p>
-          <div className="mt-4 self-end flex items-center gap-3">
+          <div className="mt-4 flex items-center gap-3 self-end">
             <div className="h-px w-8 bg-black/20 dark:bg-white/10" />
-            <span className="text-sm font-medium text-black dark:text-white italic">
+            <span className="text-sm font-medium text-black italic dark:text-white">
               {quote.author}
             </span>
           </div>

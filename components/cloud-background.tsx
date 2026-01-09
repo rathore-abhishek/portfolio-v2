@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export function CloudBackground() {
   return (
-    <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden dark:hidden 2xl:block hidden">
+    <div className="pointer-events-none fixed inset-0 -z-10 hidden overflow-hidden 2xl:block dark:hidden">
       {/* Top Left Cluster */}
-      <div className="absolute top-[-10%] left-[-15%] w-[800px] h-[600px] opacity-60">
-        <div className="relative w-full h-full">
+      <div className="absolute top-[-10%] left-[-15%] h-[600px] w-[800px] opacity-60">
+        <div className="relative h-full w-full">
           <Image
             src="/clouds/elipse.svg"
             alt=""
@@ -20,18 +20,18 @@ export function CloudBackground() {
             alt=""
             width={700}
             height={500}
-            className="absolute top-[20%] left-[20%] w-[80%] h-auto opacity-80"
+            className="absolute top-[20%] left-[20%] h-auto w-[80%] opacity-80"
           />
         </div>
       </div>
 
-      <div className="absolute top-[-20%] right-[-15%] w-[700px] h-[700px] opacity-60">
-        <div className="relative w-full h-full">
+      <div className="absolute top-[-20%] right-[-15%] h-[700px] w-[700px] opacity-60">
+        <div className="relative h-full w-full">
           <Image
             src="/clouds/elipse.svg"
             alt=""
             fill
-            className="object-contain rotate-180"
+            className="rotate-180 object-contain"
             priority
           />
           <Image
@@ -39,33 +39,33 @@ export function CloudBackground() {
             alt=""
             width={700}
             height={500}
-            className="absolute top-[20%] left-[20%] w-[80%] h-auto opacity-80 rotate-180"
+            className="absolute top-[20%] left-[20%] h-auto w-[80%] rotate-180 opacity-80"
           />
         </div>
       </div>
 
       {/* Bottom Right Cluster */}
-      <div className="absolute bottom-[-20%] right-[-5%] w-[650px] h-[650px] opacity-50 rotate-[5deg]">
-        <div className="relative w-full h-full">
+      <div className="absolute right-[-5%] bottom-[-20%] h-[650px] w-[650px] rotate-[5deg] opacity-50">
+        <div className="relative h-full w-full">
           <Image
             src="/clouds/elipse.svg"
             alt=""
             fill
-            className="object-contain rotate-180"
+            className="rotate-180 object-contain"
           />
           <Image
             src="/clouds/bigCloud.png"
             alt=""
             width={800}
             height={600}
-            className="absolute bottom-[20%] right-[10%] w-[90%] h-auto"
+            className="absolute right-[10%] bottom-[20%] h-auto w-[90%]"
           />
         </div>
       </div>
 
       {/* Bottom Left Cluster */}
-      <div className="absolute bottom-[-10%] left-[-10%] w-[700px] h-[500px] opacity-40">
-        <div className="relative w-full h-full">
+      <div className="absolute bottom-[-10%] left-[-10%] h-[500px] w-[700px] opacity-40">
+        <div className="relative h-full w-full">
           <Image
             src="/clouds/elipse.svg"
             alt=""
@@ -77,7 +77,7 @@ export function CloudBackground() {
             alt=""
             width={500}
             height={400}
-            className="absolute bottom-[10%] left-[10%] w-[70%] h-auto opacity-60"
+            className="absolute bottom-[10%] left-[10%] h-auto w-[70%] opacity-60"
           />
         </div>
       </div>

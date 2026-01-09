@@ -32,6 +32,7 @@ interface ProfileHeaderProps {
 
 export function ProfileHeader({
   name = "Abhishek Rathore",
+  age = "15",
   profileImage = "/me.jpg",
   socialLinks = {
     twitter: "https://x.com/abhiishekz",
@@ -43,28 +44,28 @@ export function ProfileHeader({
   const hourDiff = calculateTimeZoneDifferenceInHours();
 
   return (
-    <div className="flex-col -mt-10">
-      <div className="flex items-center justify-between mb-4 sm:ml-8 ml-4 sm:mr-8 mr-4">
+    <div className="-mt-10 flex-col">
+      <div className="mr-4 mb-4 ml-4 flex items-center justify-between sm:mr-8 sm:ml-8">
         <div
-          className="w-24 h-24 sm:w-28 sm:h-28 relative z-10 rounded-full overflow-hidden bg-cover bg-center shrink-0"
+          className="relative z-10 h-24 w-24 shrink-0 overflow-hidden rounded-full bg-cover bg-center sm:h-28 sm:w-28"
           role="img"
           aria-label={name}
           style={{ backgroundImage: `url("${profileImage}")` }}
         />
-        <div className="flex flex-col gap-1 items-end shrink-0">
-          <p className="flex items-center gap-1.5 text-[10px] sm:text-xs font-medium font-mono text-black/70 dark:text-white/70 whitespace-nowrap">
+        <div className="flex shrink-0 flex-col items-end gap-1">
+          <p className="flex items-center gap-1.5 font-mono text-[10px] font-medium whitespace-nowrap text-black/70 sm:text-xs dark:text-white/70">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
             </span>
             Available for work
           </p>
-          <div className="text-black/40 dark:text-white/40 text-[10px] sm:text-xs flex flex-col items-end font-mono">
+          <div className="flex flex-col items-end font-mono text-[10px] text-black/40 sm:text-xs dark:text-white/40">
             <span className="font-medium">
               <Clock />
             </span>
             {hourDiff !== 0 && (
-              <span className="text-black/20 dark:text-white/20 text-[9px] sm:text-[10px]">
+              <span className="text-[9px] text-black/20 sm:text-[10px] dark:text-white/20">
                 {hourDiff > 0
                   ? `// ${Math.abs(hourDiff)}h ahead`
                   : `// ${Math.abs(hourDiff)}h behind`}
@@ -73,14 +74,14 @@ export function ProfileHeader({
           </div>
         </div>
       </div>
-      <div className="text-left sm:flex sm:justify-between sm:items-end w-full sm:px-8 px-4 flex-col sm:flex-row">
+      <div className="w-full flex-col px-4 text-left sm:flex sm:flex-row sm:items-end sm:justify-between sm:px-8">
         <div className="px-0">
-          <h1 className="font-serif italic text-2xl sm:text-4xl tracking-[0.01em] font-medium mb-0">
+          <h1 className="mb-0 font-serif text-2xl font-medium tracking-[0.01em] italic sm:text-4xl">
             {name}
           </h1>
-          <div className="text-black/40 dark:text-white/40 font-medium text-xs sm:text-sm font-manrope flex flex-wrap items-center gap-1">
-            <p>15 • Full-Stack developer — I can</p>
-            <div className="text-black dark:text-white items-center inline-block ml-1">
+          <div className="font-manrope flex flex-wrap items-center gap-1 text-xs font-medium text-black/40 sm:text-sm dark:text-white/40">
+            <p>Full-Stack developer — I can</p>
+            <div className="ml-1 inline-block items-center text-black dark:text-white">
               <Typewriter
                 options={{
                   strings: [
@@ -99,7 +100,7 @@ export function ProfileHeader({
             </div>
           </div>
         </div>
-        <div className="flex justify-start gap-1 sm:gap-2 mt-3 sm:mt-0 px-0">
+        <div className="mt-3 flex justify-start gap-1 px-0 sm:mt-0 sm:gap-2">
           {socialLinks.github && (
             <Button
               size={"icon-sm"}
@@ -201,15 +202,24 @@ export function ProfileHeader({
           <ThemeToggle />
         </div>
       </div>
-      <div className="mt-4 text-base text-black/50 dark:text-white/50 sm:px-8 px-4 leading-loose tracking-wider">
-        <span className="text-black dark:text-white">I build from zero. </span>
+      <div className="mt-4 px-4 text-base leading-loose tracking-wider text-black/50 sm:px-8 dark:text-white/50">
+        <span className="text-black/50 dark:text-white/50">
+          I&apos;m a{" "}
+          <span className="font-medium text-black dark:text-white">
+            {age} y/o
+          </span>{" "}
+          developer{" "}
+          <span className="font-medium text-black dark:text-white">
+            building from zero.{" "}
+          </span>{" "}
+        </span>
         <span>
           Including frontend, backend, full-stack applications, and AI-powered
           experiences using{" "}
         </span>
         <a
           target="_blank"
-          className="inline-flex items-center text-sm bg-black/5 dark:bg-white/5 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow text-black dark:text-white align-middle"
+          className="skill-inner-shadow inline-flex items-center rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 align-middle text-sm text-black dark:border-white/30 dark:bg-white/5 dark:text-white"
           href="https://www.typescriptlang.org/"
         >
           <TypeScript className="size-4 shrink-0" />
@@ -218,7 +228,7 @@ export function ProfileHeader({
         <span>, </span>
         <a
           target="_blank"
-          className="inline-flex items-center text-sm bg-black/5 dark:bg-white/5 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow text-black dark:text-white align-middle"
+          className="skill-inner-shadow inline-flex items-center rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 align-middle text-sm text-black dark:border-white/30 dark:bg-white/5 dark:text-white"
           href="https://react.dev/"
         >
           <ReactIcon />
@@ -227,7 +237,7 @@ export function ProfileHeader({
         <span>, </span>
         <a
           target="_blank"
-          className="inline-flex items-center text-sm bg-black/5 dark:bg-white/5 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow text-black dark:text-white align-middle"
+          className="skill-inner-shadow inline-flex items-center rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 align-middle text-sm text-black dark:border-white/30 dark:bg-white/5 dark:text-white"
           href="https://nextjs.org/"
         >
           <NextJS />
@@ -236,7 +246,7 @@ export function ProfileHeader({
         <span>, </span>
         <a
           target="_blank"
-          className="inline-flex items-center text-sm bg-black/5 dark:bg-white/5 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow text-black dark:text-white align-middle"
+          className="skill-inner-shadow inline-flex items-center rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 align-middle text-sm text-black dark:border-white/30 dark:bg-white/5 dark:text-white"
           href="https://bun.sh/"
         >
           <Bun />
@@ -245,7 +255,7 @@ export function ProfileHeader({
         <span>, and </span>
         <a
           target="_blank"
-          className="inline-flex items-center text-sm bg-black/5 dark:bg-white/5 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow text-black dark:text-white align-middle"
+          className="skill-inner-shadow inline-flex items-center rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 align-middle text-sm text-black dark:border-white/30 dark:bg-white/5 dark:text-white"
           href="https://www.postgresql.org/"
         >
           <PostgreSQL />
@@ -256,7 +266,7 @@ export function ProfileHeader({
           experiences with a keen eye for design.
         </span>
       </div>
-      <div className=" flex items-center px-4 sm:px-8 mt-4">
+      <div className="mt-4 flex items-center px-4 sm:px-8">
         <Button variant="outline" className="" size={"sm"} asChild>
           <a
             href="https://x.com/messages/compose?recipient_id=1828108311901966337"
@@ -266,7 +276,7 @@ export function ProfileHeader({
             <DM className="opacity-40" /> Twitter DM
           </a>
         </Button>
-        <span className="mx-1 text-xs text-black/20 dark:text-white/20 font-medium">
+        <span className="mx-1 text-xs font-medium text-black/20 dark:text-white/20">
           OR
         </span>
         <Button variant="outline" size={"sm"} asChild>

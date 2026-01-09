@@ -77,10 +77,10 @@ const ProjectsSection = () => {
 
   return (
     <section className="px-8">
-      <h2 className="font-serif text-xl text-black/50 dark:text-white/40 mb-4">
+      <h2 className="mb-4 font-serif text-xl text-black/50 dark:text-white/40">
         Proof of work
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard
             key={project.id}
@@ -92,7 +92,7 @@ const ProjectsSection = () => {
           />
         ))}
       </div>
-      <h5 className="mt-4 bg-linear-to-r py-1 from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-center font-neu text-3xl whitespace-nowrap font-extrabold text-transparent opacity-30 md:text-6xl">
+      <h5 className="font-neu mt-4 bg-linear-to-r from-gray-200 via-gray-400 to-gray-600 bg-clip-text py-1 text-center text-3xl font-extrabold whitespace-nowrap text-transparent opacity-30 md:text-6xl">
         Shipping More Soon
       </h5>
     </section>

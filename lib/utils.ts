@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function calculateTimeZoneDifferenceInHours(
-  timeZone: string = "Asia/Kolkata"
+  timeZone: string = "Asia/Kolkata",
 ) {
   // Get the current time
   const now = new Date();

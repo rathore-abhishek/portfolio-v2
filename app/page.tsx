@@ -10,23 +10,23 @@ import { CloudBackground } from "@/components/cloud-background";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full relative">
-      <div className="max-w-3xl min-h-screen  w-full mx-auto border-x border-border pb-4 relative z-10">
+    <div className="relative min-h-screen w-full">
+      <div className="border-border relative z-10 mx-auto min-h-screen w-full max-w-3xl border-x pb-4">
         <Banner />
         <ProfileHeader />
-        <div className="h-px bg-border my-4" />
+        <div className="bg-border my-4 h-px" />
         <ExperienceSection />
-        <div className="h-px bg-border my-4" />
+        <div className="bg-border my-4 h-px" />
         <Projects />
-        <div className="h-px bg-border my-4" />
+        <div className="bg-border my-4 h-px" />
         <SkillsSection />
         {/* <div className="h-px bg-border my-4" />
         <Blogs /> */}
-        <div className="h-px bg-border my-4" />
+        <div className="bg-border my-4 h-px" />
         <CTA />
-        <div className="h-px bg-border my-4" />
+        <div className="bg-border my-4 h-px" />
         <QuoteSection />
-        <div className="h-px bg-border my-4" />
+        <div className="bg-border my-4 h-px" />
         <Footer />
       </div>
       <CloudBackground />

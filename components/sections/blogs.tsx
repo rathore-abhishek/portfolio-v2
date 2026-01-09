@@ -35,7 +35,7 @@ const BlogCard = ({ post }: { post: (typeof BLOG_POSTS)[0] }) => {
       className="group relative cursor-pointer"
     >
       {/* Date floating in the background / Vertical alignment */}
-      <div className="flex items-start gap-4 h-full">
+      <div className="flex h-full items-start gap-4">
         <div className="flex-1 space-y-4 py-2">
           {/* Main Content Container */}
           <div className="relative perspective-[2000px]">
@@ -47,13 +47,13 @@ const BlogCard = ({ post }: { post: (typeof BLOG_POSTS)[0] }) => {
               }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               style={{ transformStyle: "preserve-3d" }}
-              className="relative aspect-video w-full overflow-hidden rounded-sm border border-border bg-muted/30"
+              className="border-border bg-muted/30 relative aspect-video w-full overflow-hidden rounded-sm border"
             >
               <Image
                 src={post.image}
                 alt={post.title}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-100 scale-105 rounded-sm"
+                className="scale-105 rounded-sm object-cover transition-transform duration-700 group-hover:scale-100"
               />
 
               {/* Intentional Glass Overlay on hover */}
@@ -73,19 +73,19 @@ const BlogCard = ({ post }: { post: (typeof BLOG_POSTS)[0] }) => {
                 hover: { opacity: 0, x: 0, y: 0 },
               }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-0 -z-10 border-x border-(--pattern-fg) bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed rounded-sm pointer-events-none"
+              className="pointer-events-none absolute inset-0 -z-10 rounded-sm border-x border-(--pattern-fg) bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed"
             />
           </div>
 
           {/* Typography */}
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-mono text-black/40 dark:text-white/30">
+              <span className="font-mono text-[10px] text-black/40 dark:text-white/30">
                 {post.date}
               </span>
             </div>
 
-            <h3 className="font- italic text-sm font-medium leading-tight text-black/60 dark:text-white/50 group-hover:text-black dark:group-hover:text-white transition-colors duration-400 max-w-[90%]">
+            <h3 className="font- max-w-[90%] text-sm leading-tight font-medium text-black/60 italic transition-colors duration-400 group-hover:text-black dark:text-white/50 dark:group-hover:text-white">
               {post.title}
             </h3>
           </div>
@@ -98,17 +98,17 @@ const BlogCard = ({ post }: { post: (typeof BLOG_POSTS)[0] }) => {
 export const Blogs = () => {
   return (
     <section className="px-8">
-      <div className="flex items-baseline justify-between mb-4">
-        <h2 className="font-serif text-xl text-black/50 dark:text-white/40 italic">
+      <div className="mb-4 flex items-baseline justify-between">
+        <h2 className="font-serif text-xl text-black/50 italic dark:text-white/40">
           My Thoughts
         </h2>
 
-        <a className="text-white/30 text-xs font-semibold inline-flex gap-1 items-center hover:text-white transition-colors duration-200 cursor-pointer">
+        <a className="inline-flex cursor-pointer items-center gap-1 text-xs font-semibold text-white/30 transition-colors duration-200 hover:text-white">
           ALL <Share />
         </a>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+      <div className="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
         {BLOG_POSTS.map((post) => (
           <BlogCard key={post.id} post={post} />
         ))}
