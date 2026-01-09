@@ -79,7 +79,7 @@ export function ProfileHeader({
             {name}
           </h1>
           <div className="text-black/40 dark:text-white/40 font-medium text-xs sm:text-sm font-manrope flex flex-wrap items-center gap-1">
-            <p>Full-Stack Developer — I can</p>
+            <p>15 • Full-Stack developer — I can</p>
             <div className="text-black dark:text-white items-center inline-block ml-1">
               <Typewriter
                 options={{
