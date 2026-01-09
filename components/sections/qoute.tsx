@@ -1,6 +1,6 @@
 import React from "react";
 
-export const quotes = [
+const quotes = [
   {
     quote: `A man who is master of patience is master of everything else.`,
     author: "George Savile",

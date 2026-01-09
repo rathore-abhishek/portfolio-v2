@@ -2,8 +2,6 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import React from "react";
-import { Button } from "../ui/button";
 import Share from "../icons/share";
 
 const BLOG_POSTS = [
@@ -116,5 +114,3 @@ export const Blogs = () => {
     </section>
   );
 };
-
-export default Blogs;
