@@ -26,7 +26,7 @@ export function CTA() {
                   alt={"Abhishek Rathore"}
                   width={20}
                   height={20}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full rounded-full bg-zinc-900 object-cover dark:bg-white"
                   src={"/me.png"}
                 />
               </div>
