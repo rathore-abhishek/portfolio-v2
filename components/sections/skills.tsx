@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import {
@@ -6,6 +7,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { motion } from "motion/react";
 
 import TypeScript from "@/components/icons/typescript";
 import NextJS from "@/components/icons/nextjs";
@@ -51,7 +53,11 @@ export const SkillsSection = () => {
           {skills.map((skill) => (
             <Tooltip key={skill.name}>
               <TooltipTrigger asChild>
-                <div className="group relative flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <motion.div
+                  className="group relative flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  draggable
+                  drag
+                >
                   {skill.icon ? (
                     <skill.icon className="h-8 w-8 text-black md:h-10 md:w-10 dark:text-white" />
                   ) : skill.image ? (
@@ -67,7 +73,7 @@ export const SkillsSection = () => {
                       {skill.name.substring(0, 2).toUpperCase()}
                     </div>
                   )}
-                </div>
+                </motion.div>
               </TooltipTrigger>
               <TooltipContent side="top" className="font-medium">
                 {skill.name}

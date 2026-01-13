@@ -7,10 +7,10 @@ import X from "../icons/x";
 import LinkedIn from "../icons/linkedin";
 import Mail from "../icons/mail";
 
-export default function CTA() {
+export function CTA() {
   return (
-    <div className="mt-6 w-full flex-col px-6 sm:flex sm:items-center sm:justify-between sm:px-12">
-      <p className="mb-4 text-center font-serif text-base italic opacity-50 sm:mb-3 md:text-xl">
+    <div className="w-full flex-col px-6 sm:flex sm:items-center sm:justify-between sm:px-12">
+      <p className="mb-4 text-center font-serif text-2xl text-pretty italic opacity-50 sm:mb-3 md:text-xl">
         If you&apos;ve read this far, you might be interested in what I do.
       </p>
       <div className="mt-4 flex w-full justify-center sm:mt-0 sm:w-auto sm:justify-end">

@@ -40,10 +40,10 @@ const BlogCard = ({ post }: { post: (typeof BLOG_POSTS)[0] }) => {
             {/* The "Intentional" 3D Frame */}
             <motion.div
               variants={{
-                initial: { rotateY: -12, rotateX: 5, x: 8, y: -4 },
+                initial: { rotateY: -12, rotateX: 5, x: 8, y: -6 },
                 hover: { rotateY: 0, rotateX: 0, x: 0, y: 0 },
               }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               style={{ transformStyle: "preserve-3d" }}
               className="border-border bg-muted/30 relative aspect-video w-full overflow-hidden rounded-sm border"
             >
@@ -51,7 +51,7 @@ const BlogCard = ({ post }: { post: (typeof BLOG_POSTS)[0] }) => {
                 src={post.image}
                 alt={post.title}
                 fill
-                className="scale-105 rounded-sm object-cover transition-transform duration-700 group-hover:scale-100"
+                className="rounded-sm object-cover"
               />
 
               {/* Intentional Glass Overlay on hover */}
@@ -65,14 +65,7 @@ const BlogCard = ({ post }: { post: (typeof BLOG_POSTS)[0] }) => {
             </motion.div>
 
             {/* "Shadow" / Ghost Layer behind - creating structural thickness */}
-            <motion.div
-              variants={{
-                initial: { opacity: 1, x: -8, y: 8 },
-                hover: { opacity: 0, x: 0, y: 0 },
-              }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="pointer-events-none absolute inset-0 -z-10 rounded-sm border-x border-(--pattern-fg) bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed"
-            />
+            <div className="pointer-events-none absolute inset-0 -z-10 rounded-sm border-x border-(--pattern-fg) bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed" />
           </div>
 
           {/* Typography */}
@@ -83,7 +76,7 @@ const BlogCard = ({ post }: { post: (typeof BLOG_POSTS)[0] }) => {
               </span>
             </div>
 
-            <h3 className="font- max-w-[90%] text-sm leading-tight font-medium text-black/60 italic transition-colors duration-400 group-hover:text-black dark:text-white/50 dark:group-hover:text-white">
+            <h3 className="font- max-w-[90%] text-sm leading-tight font-medium text-black/60 italic transition-colors duration-200 group-hover:text-black dark:text-white/50 dark:group-hover:text-white">
               {post.title}
             </h3>
           </div>

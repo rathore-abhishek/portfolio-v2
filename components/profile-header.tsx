@@ -33,7 +33,7 @@ interface ProfileHeaderProps {
 export function ProfileHeader({
   name = "Abhishek Rathore",
   age = "15",
-  profileImage = "/me.jpg",
+  profileImage = "/me.png",
   socialLinks = {
     twitter: "https://x.com/abhiishekz",
     github: "https://github.com/rathore-abhishek",
@@ -47,12 +47,12 @@ export function ProfileHeader({
     <div className="-mt-10 flex-col">
       <div className="mr-4 mb-4 ml-4 flex items-center justify-between sm:mr-8 sm:ml-8">
         <div
-          className="relative z-10 h-24 w-24 shrink-0 overflow-hidden rounded-full bg-cover bg-center sm:h-28 sm:w-28"
+          className="relative z-10 h-24 w-24 shrink-0 overflow-hidden rounded-full border bg-white bg-cover bg-center sm:h-28 sm:w-28"
           role="img"
           aria-label={name}
           style={{ backgroundImage: `url("${profileImage}")` }}
         />
-        <div className="flex shrink-0 flex-col items-end gap-1">
+        <div className="mt-1 flex shrink-0 flex-col items-end gap-1">
           <p className="flex items-center gap-1.5 font-mono text-[10px] font-medium whitespace-nowrap text-black/70 sm:text-xs dark:text-white/70">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>

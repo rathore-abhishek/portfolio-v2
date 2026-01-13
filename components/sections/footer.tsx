@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
     <section className="flex flex-col items-center justify-between px-8 sm:flex-row">
-      <p className="text-sm text-black/40 dark:text-white/40">
+      <p className="font-mono text-xs text-black/40 dark:text-white/40">
         © 2026 All rights reserved.
       </p>
-      <p className="text-sm font-medium text-black/40 dark:text-white/40">
+      <p className="font-mono text-xs font-medium text-black/40 dark:text-white/40">
         Designed{" "}
         <span className="font-serif text-lg text-black italic dark:text-white">
           &

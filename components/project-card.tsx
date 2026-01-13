@@ -46,11 +46,11 @@ const ProjectCard = ({
         <h4 className="text-base font-semibold text-black dark:text-white">
           {title}
         </h4>
-        <p className="w-48 text-sm text-black/50 dark:text-white/50">
+        <p className="w-[calc(100%-1.5rem)] text-sm text-black/50 dark:text-white/50">
           {description}
         </p>
         {!false && techStack && techStack.length > 0 && (
-          <div className="mt-auto flex items-center">
+          <div className="mt-auto flex items-center pt-2">
             {techStack.slice(0, 4).map((tech) => {
               const isHovered = hoveredTech === tech.id;
               return (
