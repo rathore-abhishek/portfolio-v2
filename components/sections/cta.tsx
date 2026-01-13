@@ -27,7 +27,7 @@ export function CTA() {
                   width={20}
                   height={20}
                   className="h-full w-full object-cover"
-                  src={"/me.jpg"}
+                  src={"/me.png"}
                 />
               </div>
               <div className="absolute left-[24px] flex -translate-x-full transform items-center gap-0 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
