@@ -4,11 +4,11 @@ import { ProfileHeader } from "@/components/profile-header";
 import { CTA } from "@/components/sections/cta";
 import ExperienceSection from "@/components/sections/experience";
 import Footer from "@/components/sections/footer";
+import GithubContributions from "@/components/sections/github-contributions";
 import Projects from "@/components/sections/projects";
 import { QuoteSection } from "@/components/sections/qoute";
 import { SkillsSection } from "@/components/sections/skills";
 import { Text } from "@/components/sections/txt";
-import { Blogs } from "../components/sections/blogs";
 
 export default function Home() {
   return (
@@ -22,7 +22,8 @@ export default function Home() {
         <Projects />
         <div className="bg-border my-4 h-px" />
         <SkillsSection />
-        {/*<div className="bg-border my-4 h-px" />*/}
+        <div className="bg-border my-4 h-px" />
+        <GithubContributions />
         {/*<Blogs />*/}
 
         <div className="bg-border my-4 h-px" />
