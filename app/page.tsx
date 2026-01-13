@@ -22,8 +22,8 @@ export default function Home() {
         <Projects />
         <div className="bg-border my-4 h-px" />
         <SkillsSection />
-        <div className="bg-border my-4 h-px" />
-        <Blogs />
+        {/*<div className="bg-border my-4 h-px" />*/}
+        {/*<Blogs />*/}
 
         <div className="bg-border my-4 h-px" />
         <CTA />

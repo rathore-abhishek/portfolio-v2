@@ -24,7 +24,6 @@ export function Text() {
           style={{
             backgroundImage:
               "repeating-linear-gradient(-45deg, transparent, transparent 10px, currentcolor 10px, currentcolor 11px)",
-            opacity: "0.15;",
           }}
         ></div>
       </div>
