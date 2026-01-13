@@ -7,7 +7,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { motion, useMotionValue, animate, clamp } from "motion/react";
+import { motion, useMotionValue, animate } from "motion/react";
 
 import TypeScript from "@/components/icons/typescript";
 import NextJS from "@/components/icons/nextjs";
@@ -50,11 +50,11 @@ export const SkillsSection = () => {
       </h2>
       <TooltipProvider>
         <div className="relative grid grid-cols-4 justify-items-center gap-8 sm:grid-cols-6 md:grid-cols-8 md:justify-items-start lg:grid-cols-12">
-          <span class="pointer-events-none absolute -top-12 right-0 size-12 -rotate-34 font-mono text-[10px] font-medium text-black/30 dark:text-white/10">
+          <span className="pointer-events-none absolute -top-12 right-0 size-12 -rotate-34 font-mono text-[10px] font-medium text-black/30 dark:text-white/10">
             drag me :D
           </span>
           <svg
-            class="pointer-events-none absolute -top-12 right-15 size-10 rotate-120 text-black/30 dark:text-white/10"
+            className="pointer-events-none absolute -top-12 right-15 size-10 rotate-120 text-black/30 dark:text-white/10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 323.057 323.057"
             fill="currentColor"

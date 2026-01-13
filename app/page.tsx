@@ -17,16 +17,16 @@ export default function Home() {
         <Banner />
         <ProfileHeader />
         <div className="bg-border my-4 h-px" />
+        <GithubContributions />
+        <div className="bg-border my-4 h-px" />
         <ExperienceSection />
         <div className="bg-border my-4 h-px" />
         <Projects />
         <div className="bg-border my-4 h-px" />
         <SkillsSection />
         <div className="bg-border my-4 h-px" />
-        <GithubContributions />
         {/*<Blogs />*/}
 
-        <div className="bg-border my-4 h-px" />
         <CTA />
 
         {/*<div className="bg-border my-4 h-px" />*/}

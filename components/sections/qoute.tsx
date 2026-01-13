@@ -31,7 +31,7 @@ const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
 export const QuoteSection = () => {
   return (
-    <section className="relative px-8">
+    <section className="relative mt-4 px-8">
       {/* Background Quote Mark */}
       <div className="pointer-events-none absolute bottom-0 left-8 opacity-[0.05] dark:opacity-[0.05]">
         <svg
