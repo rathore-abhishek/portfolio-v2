@@ -50,7 +50,7 @@ export function Text() {
         }}
         onPointerLeave={() => setVisible(false)}
       >
-        <span className="text-center text-9xl font-bold whitespace-nowrap text-black/10 italic transition-colors duration-300 hover:text-black dark:text-white/5 dark:hover:text-white">
+        <span className="text-inner-shadow text-center text-9xl font-bold whitespace-nowrap text-black/10 italic transition-colors duration-300 hover:text-black dark:text-white/5 dark:hover:text-white">
           改善
         </span>
 
