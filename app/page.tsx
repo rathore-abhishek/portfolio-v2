@@ -1,6 +1,7 @@
 import { Banner } from "@/components/banner";
 import { CloudBackground } from "@/components/cloud-background";
 import { ProfileHeader } from "@/components/profile-header";
+import { Blogs } from "@/components/sections/blogs";
 import { CTA } from "@/components/sections/cta";
 import ExperienceSection from "@/components/sections/experience";
 import Footer from "@/components/sections/footer";
@@ -25,7 +26,8 @@ export default function Home() {
         <div className="bg-border my-4 h-px" />
         <SkillsSection />
         <div className="bg-border my-4 h-px" />
-        {/*<Blogs />*/}
+        <Blogs />
+        <div className="bg-border my-4 h-px" />
 
         <CTA />
 

@@ -76,8 +76,26 @@ const BlogCard = ({ post }: { post: (typeof BLOG_POSTS)[0] }) => {
               </span>
             </div>
 
-            <h3 className="font- max-w-[90%] text-sm leading-tight font-medium text-black/60 italic transition-colors duration-200 group-hover:text-black dark:text-white/50 dark:group-hover:text-white">
-              {post.title}
+            <h3 className="relative block overflow-visible">
+              {/* Shadow Text */}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 -z-10 bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[4px_4px] bg-fixed bg-clip-text font-medium text-transparent italic select-none"
+              >
+                {post.title}
+              </span>
+
+              {/* Main Text */}
+              <motion.span
+                variants={{
+                  initial: { x: -2, y: -2 },
+                  hover: { x: 0, y: 0 },
+                }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="block max-w-[90%] text-sm leading-tight font-medium text-black/60 italic transition-colors duration-200 group-hover:text-black dark:text-white/50 dark:group-hover:text-white"
+              >
+                {post.title}
+              </motion.span>
             </h3>
           </div>
         </div>

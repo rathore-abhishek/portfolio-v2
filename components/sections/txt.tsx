@@ -24,14 +24,14 @@ export function Text() {
   };
 
   return (
-    <div className="relative z-10 mt-10 flex w-full flex-col items-center select-none">
+    <div className="relative mt-10 flex w-full flex-col items-center select-none">
       {/* Top divider */}
-      <div className="relative h-8 w-full overflow-hidden border-t border-neutral-300 dark:border-neutral-700">
+      <div className="border-border relative h-8 w-full overflow-hidden border-t">
         <div
           className="absolute inset-0 opacity-15"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(-45deg, transparent, transparent 10px, currentColor 10px, currentColor 11px)",
+              "repeating-linear-gradient(-45deg, transparent, transparent 10px, var(--color-foreground) 10px, var(--color-foreground) 11px)",
           }}
         />
       </div>
@@ -50,9 +50,17 @@ export function Text() {
         }}
         onPointerLeave={() => setVisible(false)}
       >
-        <span className="text-inner-shadow text-center text-9xl font-bold whitespace-nowrap text-black/10 italic transition-colors duration-300 hover:text-black dark:text-white/5 dark:hover:text-white">
-          改善
-        </span>
+        <div className="group relative">
+          {/* Shadow Text (Pattern) */}
+          <span className="text-inner-shadow pointer-events-none absolute inset-0 -z-10 bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed bg-clip-text text-center text-9xl font-bold whitespace-nowrap text-transparent italic">
+            改善
+          </span>
+
+          {/* Main Text (Levitating) */}
+          <span className="text-inner-shadow z-10 block -translate-x-4 -translate-y-4 text-center text-9xl font-bold whitespace-nowrap text-[#808080] italic transition-all duration-200 group-hover:translate-x-0 group-hover:translate-y-0 hover:text-black dark:hover:text-white">
+            改善
+          </span>
+        </div>
 
         <AnimatePresence>
           {visible && (
@@ -63,8 +71,8 @@ export function Text() {
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
               className={cn(
-                "pointer-events-none absolute z-[9999] w-[260px]",
-                "bg-background border-border rounded-xl border shadow-lg",
+                "pointer-events-none absolute w-[260px]",
+                "bg-background border-border z-50 rounded-xl border shadow-lg",
               )}
               style={{
                 left: pos.x,
@@ -99,7 +107,7 @@ export function Text() {
       </div>
 
       {/* Bottom divider */}
-      <div className="relative h-8 w-full overflow-hidden border-b border-neutral-300 dark:border-neutral-700">
+      <div className="border-border relative h-8 w-full overflow-hidden border-b">
         <div
           className="absolute inset-0 opacity-15"
           style={{
