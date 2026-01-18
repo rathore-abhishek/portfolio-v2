@@ -2,6 +2,7 @@ import { Banner } from "@/components/banner";
 import { CloudBackground } from "@/components/cloud-background";
 import Divider from "@/components/divider";
 import { ProfileHeader } from "@/components/profile-header";
+import Scale from "@/components/scale";
 import { Blogs } from "@/components/sections/blogs";
 import { CTA } from "@/components/sections/cta";
 import ExperienceSection from "@/components/sections/experience";
@@ -15,7 +16,16 @@ import { Text } from "@/components/sections/txt";
 export default function Home() {
   return (
     <div className="relative min-h-screen w-full">
-      <div className="border-border relative z-10 mx-auto min-h-screen w-full max-w-3xl border-x pb-4">
+      <div className="border-border ring-0.5 ring-border relative z-10 mx-auto min-h-screen w-full max-w-3xl overflow-y-clip border-x pb-4">
+        <Scale count={50} />
+        {/* <div className="text-foreground/25 absolute top-0 right-full mr-1 inline-flex gap-1 text-sm font-medium">
+          <p className="rotate-90">0</p>
+          <p>-</p>
+        </div>
+        <div className="text-foreground/25 absolute top-15 right-full mr-1 inline-flex gap-1 text-sm font-medium">
+          <p className="rotate-90">50</p>
+          <p>-</p>
+        </div> */}
         <Banner />
         <ProfileHeader />
         <Divider />
