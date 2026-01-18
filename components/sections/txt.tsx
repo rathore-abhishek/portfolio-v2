@@ -24,9 +24,9 @@ export function Text() {
   };
 
   return (
-    <div className="relative mt-10 flex w-full flex-col items-center select-none">
+    <div className="relative flex w-full flex-col items-center select-none">
       {/* Top divider */}
-      <div className="border-border relative h-8 w-full overflow-hidden border-t">
+      <div className="relative h-8 w-full">
         <div
           className="absolute inset-0 opacity-15"
           style={{
@@ -107,7 +107,7 @@ export function Text() {
       </div>
 
       {/* Bottom divider */}
-      <div className="border-border relative h-8 w-full overflow-hidden border-b">
+      <div className="relative h-8 w-full overflow-hidden">
         <div
           className="absolute inset-0 opacity-15"
           style={{

@@ -1,5 +1,6 @@
 import { Banner } from "@/components/banner";
 import { CloudBackground } from "@/components/cloud-background";
+import Divider from "@/components/divider";
 import { ProfileHeader } from "@/components/profile-header";
 import { Blogs } from "@/components/sections/blogs";
 import { CTA } from "@/components/sections/cta";
@@ -17,28 +18,25 @@ export default function Home() {
       <div className="border-border relative z-10 mx-auto min-h-screen w-full max-w-3xl border-x pb-4">
         <Banner />
         <ProfileHeader />
-        <div className="bg-border my-4 h-px" />
+        <Divider />
         <GithubContributions />
-        <div className="bg-border my-4 h-px" />
+        <Divider />
         <ExperienceSection />
-        <div className="bg-border my-4 h-px" />
+        <Divider />
         <Projects />
-        <div className="bg-border my-4 h-px" />
+        <Divider />
         <SkillsSection />
-        <div className="bg-border my-4 h-px" />
+        <Divider />
         {/* <Blogs /> */}
-        {/* <div className="bg-border my-4 h-px" /> */}
-
         <CTA />
-
-        {/*<div className="bg-border my-4 h-px" />*/}
+        <Divider className="mb-0" />
         <Text />
-
+        <Divider className="mt-0" />
         <QuoteSection />
-        <div className="bg-border my-4 h-px" />
+        <Divider />
         <Footer />
       </div>
-      <CloudBackground />
+      {/* <CloudBackground /> */}
     </div>
   );
 }
