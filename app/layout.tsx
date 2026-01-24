@@ -4,6 +4,7 @@ import Script from "next/script";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Scale from "@/components/scale";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -68,7 +69,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="relative min-h-dvh w-full">
+            <div className="border-border ring-0.5 ring-border relative z-10 mx-auto min-h-screen w-full max-w-3xl overflow-y-clip border-x pb-4">
+              <Scale count={50} />
+              {children}
+            </div>
+          </div>
         </ThemeProvider>
         <Script
           defer

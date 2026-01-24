@@ -15,38 +15,26 @@ import { Text } from "@/components/sections/txt";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full">
-      <div className="border-border ring-0.5 ring-border relative z-10 mx-auto min-h-screen w-full max-w-3xl overflow-y-clip border-x pb-4">
-        <Scale count={50} />
-        {/* <div className="text-foreground/25 absolute top-0 right-full mr-1 inline-flex gap-1 text-sm font-medium">
-          <p className="rotate-90">0</p>
-          <p>-</p>
-        </div>
-        <div className="text-foreground/25 absolute top-15 right-full mr-1 inline-flex gap-1 text-sm font-medium">
-          <p className="rotate-90">50</p>
-          <p>-</p>
-        </div> */}
-        <Banner />
-        <ProfileHeader />
-        <Divider />
-        <GithubContributions />
-        <Divider />
-        <ExperienceSection />
-        <Divider />
-        <Projects />
-        <Divider />
-        <SkillsSection />
-        <Divider />
-        {/* <Blogs /> */}
-        <CTA />
-        <Divider className="mb-0" />
-        <Text />
-        <Divider className="mt-0" />
-        <QuoteSection />
-        <Divider />
-        <Footer />
-      </div>
-      {/* <CloudBackground /> */}
-    </div>
+    <>
+      <Banner />
+      <ProfileHeader />
+      <Divider />
+      <GithubContributions />
+      <Divider />
+      <ExperienceSection />
+      <Divider />
+      <Projects />
+      <Divider />
+      <SkillsSection />
+      <Divider />
+      {/* <Blogs /> */}
+      <CTA />
+      <Divider className="mb-0" />
+      <Text />
+      <Divider className="mt-0" />
+      <QuoteSection />
+      <Divider />
+      <Footer />
+    </>
   );
 }

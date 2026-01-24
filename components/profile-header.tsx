@@ -53,6 +53,7 @@ export function ProfileHeader({
             height={500}
             alt="decoration katana"
             className="absolute z-10"
+            unoptimized
           />
           <div
             className="relative z-0 h-24 w-24 shrink-0 overflow-hidden rounded-full border bg-white bg-cover bg-center sm:h-28 sm:w-28"
