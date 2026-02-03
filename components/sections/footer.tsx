@@ -1,5 +1,5 @@
 import { getTotalViews, getOrdinalSuffix } from "@/lib/umami";
-import DiaRainbow from "../icons/dia-rainbow";
+// import DiaRainbow from "../icons/dia-rainbow";
 
 const Footer = async () => {
   const views = await getTotalViews();
@@ -33,7 +33,7 @@ const Footer = async () => {
         )}
       </div>
 
-      <DiaRainbow />
+      {/*<DiaRainbow />*/}
     </section>
   );
 };
