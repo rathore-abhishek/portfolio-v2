@@ -7,6 +7,7 @@ import Supabase from "../icons/supabase";
 import TanstackQuery from "../icons/tanstack-query";
 import Drizzle from "../icons/drizzle";
 import Sanity from "../icons/sanity";
+import Container from "../container";
 
 const ProjectsSection = () => {
   const projects = [
@@ -76,7 +77,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="px-8">
+    <Container className="px-8">
       <h2 className="mb-4 font-serif text-xl text-black/50 dark:text-white/40">
         Proof of work
       </h2>
@@ -95,7 +96,7 @@ const ProjectsSection = () => {
       <h5 className="font-neu mt-4 bg-linear-to-r from-gray-200 via-gray-400 to-gray-600 bg-clip-text py-1 text-center text-3xl font-extrabold whitespace-nowrap text-transparent opacity-30 md:text-6xl">
         Shipping More Soon
       </h5>
-    </section>
+    </Container>
   );
 };
 

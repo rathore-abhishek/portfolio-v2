@@ -3,6 +3,7 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
+import Container from "../container";
 
 export function Text() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -24,7 +25,7 @@ export function Text() {
   };
 
   return (
-    <div className="relative flex w-full flex-col items-center select-none">
+    <Container className="relative flex w-full flex-col items-center py-0 select-none">
       {/* Top divider */}
       <div className="relative h-8 w-full">
         <div
@@ -116,6 +117,6 @@ export function Text() {
           }}
         />
       </div>
-    </div>
+    </Container>
   );
 }

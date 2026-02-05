@@ -69,9 +69,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative min-h-dvh w-full">
-            <div className="border-border ring-0.5 ring-border relative z-10 mx-auto min-h-screen w-full max-w-3xl overflow-y-clip border-x pb-4">
+          <div className="relative min-h-dvh w-full overflow-clip">
+            <div className="relative mx-auto max-w-3xl">
               <Scale count={50} />
+            </div>
+            <div className="border-border ring-0.5 ring-border z-10 mx-auto min-h-screen w-full overflow-y-clip border-x">
               {children}
             </div>
           </div>

@@ -6,10 +6,11 @@ import Github from "../icons/github";
 import X from "../icons/x";
 import LinkedIn from "../icons/linkedin";
 import Mail from "../icons/mail";
+import Container from "../container";
 
 export function CTA() {
   return (
-    <div className="w-full flex-col px-6 sm:flex sm:items-center sm:justify-between sm:px-12">
+    <Container className="w-full flex-col px-6 sm:flex sm:items-center sm:justify-between sm:px-12">
       <p className="mb-4 text-center font-serif text-2xl text-pretty italic opacity-50 sm:mb-3 md:text-xl">
         If you&apos;ve read this far, you might be interested in what I do.
       </p>
@@ -124,6 +125,6 @@ export function CTA() {
           </p>
         </a>
       </div>
-    </div>
+    </Container>
   );
 }

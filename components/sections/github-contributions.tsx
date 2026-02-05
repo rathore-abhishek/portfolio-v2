@@ -2,6 +2,7 @@
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
 import React, { useState } from "react";
+import Container from "../container";
 
 type Contribution = { date: string; count: number };
 
@@ -39,32 +40,34 @@ const GithubContributions: React.FC = () => {
   }
 
   return (
-    <div className="px-8 font-medium text-black/40 dark:text-white/40">
-      <GitHubCalendar
-        username={"rathore-abhishek"}
-        colorScheme={resolvedTheme as "light" | "dark"}
-        fontSize={12}
-        blockSize={12}
-        year={2026}
-        blockRadius={4}
-        theme={theme}
-        labels={{
-          totalCount: contribution
-            ? `${contribution.count} contribution${contribution.count && "s"} in ${formateContributionDate(contribution.date)}`
-            : "Total {{count}} contributions in {{year}}",
-        }}
-        renderBlock={(block, activity) =>
-          React.cloneElement(block, {
-            onPointerEnter: () => {
-              setContribution({ date: activity.date, count: activity.count });
-            },
-            onPointerLeave: () => {
-              setContribution(null);
-            },
-          })
-        }
-      />
-    </div>
+    <Container>
+      <div className="px-8 font-medium text-black/40 dark:text-white/40">
+        <GitHubCalendar
+          username={"rathore-abhishek"}
+          colorScheme={resolvedTheme as "light" | "dark"}
+          fontSize={12}
+          blockSize={12}
+          year={2026}
+          blockRadius={4}
+          theme={theme}
+          labels={{
+            totalCount: contribution
+              ? `${contribution.count} contribution${contribution.count && "s"} in ${formateContributionDate(contribution.date)}`
+              : "Total {{count}} contributions in {{year}}",
+          }}
+          renderBlock={(block, activity) =>
+            React.cloneElement(block, {
+              onPointerEnter: () => {
+                setContribution({ date: activity.date, count: activity.count });
+              },
+              onPointerLeave: () => {
+                setContribution(null);
+              },
+            })
+          }
+        />
+      </div>
+    </Container>
   );
 };
 

@@ -3,12 +3,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 import ArrowUp from "../icons/arrow-up";
 import { cn } from "@/lib/utils";
+import Container from "../container";
 
 const ExperienceSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="px-8">
+    <Container className="px-8">
       <h2 className="mb-2 font-serif text-xl text-black/50 dark:text-white/40">
         Professional Experience
       </h2>
@@ -100,7 +101,7 @@ const ExperienceSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

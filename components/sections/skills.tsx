@@ -20,6 +20,7 @@ import Figma from "../icons/figma";
 import Drizzle from "../icons/drizzle";
 import Prisma from "../icons/prisma";
 import Sanity from "../icons/sanity";
+import Container from "../container";
 
 interface Skill {
   name: string;
@@ -44,7 +45,7 @@ const skills: Skill[] = [
 
 export const SkillsSection = () => {
   return (
-    <section className="px-8">
+    <Container className="px-8">
       <h2 className="mb-6 font-serif text-xl text-black/50 dark:text-white/40">
         Stack I use
       </h2>
@@ -90,7 +91,7 @@ export const SkillsSection = () => {
           ))}
         </div>
       </TooltipProvider>
-    </section>
+    </Container>
   );
 };
 

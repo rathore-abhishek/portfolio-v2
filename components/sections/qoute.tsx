@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "../container";
 
 const quotes = [
   {
@@ -31,9 +32,9 @@ const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
 export const QuoteSection = () => {
   return (
-    <section className="relative mt-4 px-8 z-10">
+    <Container className="relative z-10 px-8">
       {/* Background Quote Mark */}
-      <div className="pointer-events-none absolute bottom-0 left-8 opacity-[0.05] dark:opacity-[0.05]">
+      <div className="pointer-events-none absolute bottom-1 left-8 opacity-[0.05] dark:opacity-[0.05]">
         <svg
           width="60"
           height="40"
@@ -58,6 +59,6 @@ export const QuoteSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 };

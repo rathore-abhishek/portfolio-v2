@@ -1,11 +1,12 @@
 import { getTotalViews, getOrdinalSuffix } from "@/lib/umami";
+import Container from "../container";
 // import DiaRainbow from "../icons/dia-rainbow";
 
 const Footer = async () => {
   const views = await getTotalViews();
 
   return (
-    <section className="relative space-y-4">
+    <Container className="relative space-y-4">
       <div className="relative flex flex-col items-center justify-between px-8 sm:flex-row">
         <p className="font-mono text-xs text-black/40 dark:text-white/40">
           © 2026 All rights reserved.
@@ -34,7 +35,7 @@ const Footer = async () => {
       </div>
 
       {/*<DiaRainbow />*/}
-    </section>
+    </Container>
   );
 };
 
