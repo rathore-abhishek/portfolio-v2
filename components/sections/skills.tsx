@@ -14,13 +14,13 @@ import NextJS from "@/components/icons/nextjs";
 import TailwindCSS from "@/components/icons/tailwind";
 import PostgreSQL from "@/components/icons/postgresql";
 import Supabase from "@/components/icons/supabase";
-import Git from "../icons/git";
 import Docker from "../icons/docker";
 import Figma from "../icons/figma";
 import Drizzle from "../icons/drizzle";
 import Prisma from "../icons/prisma";
 import Sanity from "../icons/sanity";
 import Container from "../container";
+import Payload from "../icons/payload";
 
 interface Skill {
   name: string;
@@ -34,12 +34,13 @@ const skills: Skill[] = [
   { name: "Tailwind CSS", icon: TailwindCSS },
   { name: "PostgreSQL", icon: PostgreSQL },
   { name: "Supabase", icon: Supabase },
+  { name: "Payload CMS", icon: Payload },
   { name: "Drizzle", icon: Drizzle },
   { name: "Prisma", icon: Prisma },
   { name: "Sanity", icon: Sanity },
   { name: "Framer Motion", image: "/skills/motion.png" },
+  // { name: "Git", icon: Git },
   { name: "Docker", icon: Docker },
-  { name: "Git", icon: Git },
   { name: "Figma", icon: Figma },
 ];
 
