@@ -12,6 +12,27 @@ import Container from "../container";
 const ProjectsSection = () => {
   const projects = [
     {
+      id: "divine-canvas",
+      title: "Divine Canvas",
+      description:
+        "A place for developers to share their side projects and get feedback from peers.",
+      image: "/divine-canvas.png", // Placeholder image
+      techStack: [
+        { id: "nextjs", label: "Next.js", icon: <NextJS /> },
+        { id: "tailwind", label: "Tailwind", icon: <TailwindCSS /> },
+        { id: "motion", label: "Motion", image: "/skills/motion.png" },
+        { id: "drizzle", label: "Drizzle", icon: <Drizzle /> },
+        {
+          id: "tanstack-query",
+          label: "TanStack Query",
+          icon: <TanstackQuery />,
+        },
+        { id: "zod", label: "Zod" },
+        { id: "tanstack-forms", label: "TanStack Forms" },
+      ],
+      link: "https://rvyu.vercel.app/",
+    },
+    {
       id: "rvyu",
       title: "rvyu.",
       description:
@@ -53,27 +74,27 @@ const ProjectsSection = () => {
       ],
       link: "https://theleansuite.com/",
     },
-    {
-      id: "spf-logistics",
-      title: "SPF Logistics",
-      description:
-        "Public website and internal dashboard built for an Australian logistics firm.",
-      image: "/spf-logistics.png", // Placeholder image
-      techStack: [
-        { id: "nextjs", label: "Next.js", icon: <NextJS /> },
-        { id: "supabase", label: "Supabase", icon: <Supabase /> },
-        { id: "tailwind", label: "Tailwind", icon: <TailwindCSS /> },
-        { id: "motion", label: "Motion", image: "/skills/motion.png" },
-        {
-          id: "tanstack-query",
-          label: "TanStack Query",
-          icon: <TanstackQuery />,
-        },
-        { id: "zod", label: "Zod" },
-        { id: "tanstack-forms", label: "TanStack Forms" },
-      ],
-      link: "https://spflogistics.com.au",
-    },
+    // {
+    //   id: "spf-logistics",
+    //   title: "SPF Logistics",
+    //   description:
+    //     "Public website and internal dashboard built for an Australian logistics firm.",
+    //   image: "/spf-logistics.png", // Placeholder image
+    //   techStack: [
+    //     { id: "nextjs", label: "Next.js", icon: <NextJS /> },
+    //     { id: "supabase", label: "Supabase", icon: <Supabase /> },
+    //     { id: "tailwind", label: "Tailwind", icon: <TailwindCSS /> },
+    //     { id: "motion", label: "Motion", image: "/skills/motion.png" },
+    //     {
+    //       id: "tanstack-query",
+    //       label: "TanStack Query",
+    //       icon: <TanstackQuery />,
+    //     },
+    //     { id: "zod", label: "Zod" },
+    //     { id: "tanstack-forms", label: "TanStack Forms" },
+    //   ],
+    //   link: "https://spflogistics.com.au",
+    // },
   ];
 
   return (
