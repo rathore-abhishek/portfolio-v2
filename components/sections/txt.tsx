@@ -25,7 +25,7 @@ export function Text() {
   };
 
   return (
-    <Container className="relative flex w-full flex-col items-center py-0 select-none">
+    <Container className="relative flex w-full flex-col items-center overflow-visible py-0 select-none">
       {/* Top divider */}
       <div className="relative h-8 w-full">
         <div
@@ -73,7 +73,7 @@ export function Text() {
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
               className={cn(
                 "pointer-events-none absolute w-[260px]",
-                "bg-background border-border z-50 rounded-xl border shadow-lg",
+                "bg-background border-border z-10 rounded-xl border shadow-lg",
               )}
               style={{
                 left: pos.x,

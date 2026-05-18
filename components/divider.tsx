@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "@/lib/utils";
 
 const Divider = ({ className }: { className?: string }) => {
@@ -6,7 +5,7 @@ const Divider = ({ className }: { className?: string }) => {
     <div className="w-full">
       <div
         className={cn(
-          "relative mx-auto h-px max-w-3xl overflow-visible",
+          "relative z-0 mx-auto h-px max-w-3xl overflow-visible",
           className,
         )}
       >

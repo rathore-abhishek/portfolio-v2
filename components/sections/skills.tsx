@@ -125,7 +125,7 @@ export const DraggableSkill = React.forwardRef<
         });
       }}
       whileTap={{ cursor: "grabbing" }}
-      className={`cursor-grab touch-none select-none active:cursor-grabbing ${
+      className={`z-20 cursor-grab touch-none select-none active:cursor-grabbing ${
         className ?? ""
       }`}
       {...props}
