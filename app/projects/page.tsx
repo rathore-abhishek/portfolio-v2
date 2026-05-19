@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Divider from "@/components/divider";
 import Navbar from "./_components/navbar";
 import ProjectsSection from "./_components/projects";
 import Footer from "@/components/sections/footer";
+
+export const metadata: Metadata = {
+  title: "Projects — Abhishek Rathore",
+  description:
+    "A showcase of my work — full-stack applications, side projects, and things I've built from scratch.",
+  openGraph: {
+    title: "Projects — Abhishek Rathore",
+    description:
+      "A showcase of my work — full-stack applications, side projects, and things I've built from scratch.",
+  },
+};
 
 const ProjectsPage = () => {
   return (

@@ -67,6 +67,7 @@ const details: ProjectDetail[] = [
     longDescription:
       "A platform where devs can share their side projects and get real feedback from other builders. Kept the UI clean and minimal so the projects speak for themselves — nothing flashy, just good typography and smooth interactions.",
     images: [
+      { label: "Website", src: "/rvyu.png" },
       { label: "Projects", src: "/projects/rvyu/projects.png" },
       { label: "Create Project", src: "/projects/rvyu/create-project.png" },
       { label: "Edit Project", src: "/projects/rvyu/edit-project.png" },

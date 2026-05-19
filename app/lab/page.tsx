@@ -1,4 +1,5 @@
 "use client";
+import Container from "@/components/container";
 import { Navbar } from "@/components/navbar";
 import { motion, AnimatePresence } from "motion/react";
 import { useRef, useState } from "react";
@@ -67,7 +68,7 @@ export default function LabPage() {
   }
 
   return (
-    <div className="px-4">
+    <Container className="px-8">
       <Navbar />
 
       <div className="flex flex-col gap-4">
@@ -131,6 +132,6 @@ export default function LabPage() {
           />
         )}
       </AnimatePresence>
-    </div>
+    </Container>
   );
 }
