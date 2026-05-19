@@ -33,7 +33,7 @@ interface ProfileHeaderProps {
 
 export function ProfileHeader({
   name = "Abhishek Rathore",
-  age = "15",
+  age = "16",
   profileImage = "/me.png",
   socialLinks = {
     twitter: "https://x.com/abhiishekz",

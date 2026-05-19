@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import React, { useState } from "react";
 
@@ -15,7 +16,8 @@ interface ProjectProps {
   description: string;
   image: string;
   techStack: TechItem[];
-  link: string;
+  link?: string;
+  slug: string;
 }
 
 const ProjectCard = ({
@@ -23,23 +25,22 @@ const ProjectCard = ({
   description,
   image,
   techStack,
-  link,
+  slug,
 }: ProjectProps) => {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   return (
-    <a
-      href={link}
-      target="_blank"
+    <Link
+      href={`/projects/${slug}`}
       className="group flex cursor-pointer flex-col gap-4 rounded-lg pb-4 transition-shadow duration-300 hover:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:hover:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
     >
-      <div className="aspect-60/40 overflow-hidden rounded-lg transition-all duration-300 group-hover:scale-[1.05]">
+      <div className="relative aspect-60/40 overflow-hidden rounded-lg transition-all duration-300 group-hover:scale-[1.05]">
         <Image
           src={image}
           alt={title}
           width={400}
           height={400}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-top"
         />
       </div>
       <div className="flex flex-col gap-1 transition-all duration-300 group-hover:translate-x-4">
@@ -172,7 +173,7 @@ const ProjectCard = ({
           </div>
         )}
       </div>
-    </a>
+    </Link>
   );
 };
 
