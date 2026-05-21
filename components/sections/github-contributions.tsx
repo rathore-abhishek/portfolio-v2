@@ -44,7 +44,9 @@ const GithubContributions: React.FC = () => {
       <div className="px-8 font-medium text-black/40 dark:text-white/40">
         <GitHubCalendar
           username={"rathore-abhishek"}
-          colorScheme={resolvedTheme as "light" | "dark"}
+          colorScheme={
+            (resolvedTheme as "light" | "dark") ? resolvedTheme : "dark"
+          }
           fontSize={12}
           blockSize={12}
           year={2026}
