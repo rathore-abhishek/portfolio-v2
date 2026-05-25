@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.title} — Abhishek Rathore`,
+    title: `${project.title} - Abhishek Rathore`,
     description: project.description,
     openGraph: {
-      title: `${project.title} — Abhishek Rathore`,
+      title: `${project.title} - Abhishek Rathore`,
       description: project.description,
       images: project.images[0]?.src ? [{ url: project.images[0].src }] : [],
     },

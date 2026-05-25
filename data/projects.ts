@@ -43,9 +43,19 @@ const details: ProjectDetail[] = [
     longDescription:
       "Built an e-commerce store for Divine Canvas that sells sacred vector artwork. It's got a proper product catalog with filtering, a smooth cart and checkout flow, and a headless CMS running on Payload so they can manage inventory and orders on their own.",
     images: [
-      { label: "Divine Canvas", src: "/divine-canvas.png" },
-      { label: "Divine Canvas", src: "/divine-canvas.png" },
-      { label: "Divine Canvas", src: "/divine-canvas.png" },
+      { label: "Home", src: "/projects/divine-canvas/home.png" },
+      { label: "Products", src: "/projects/divine-canvas/products.png" },
+      { label: "Cart", src: "/projects/divine-canvas/cart.png" },
+      { label: "Orders", src: "/projects/divine-canvas/orders.png" },
+      { label: "Payment", src: "/projects/divine-canvas/payment.png" },
+      { label: "Custom Order", src: "/projects/divine-canvas/custom-order.png" },
+      { label: "Portfolio", src: "/projects/divine-canvas/portfolio.png" },
+      { label: "Blogs", src: "/projects/divine-canvas/blogs.png" },
+      { label: "Contact", src: "/projects/divine-canvas/contact.png" },
+      { label: "Reviews", src: "/projects/divine-canvas/reviews.png" },
+      { label: "Admin Panel", src: "/projects/divine-canvas/admin-panel.png" },
+      { label: "Personal Details", src: "/projects/divine-canvas/personal-details.png" },
+      { label: "Notifications", src: "/projects/divine-canvas/notifictions.png" },
     ],
     techIds: [
       "nextjs",
