@@ -1,7 +1,7 @@
 import config from "@payload-config";
 import { getPayload } from "payload";
 import Container from "@/components/container";
-import BlogCardHome from "@/components/blog-card-home";
+import BlogCard from "@/components/blog-card";
 
 const BlogsSection = async () => {
   const payload = await getPayload({ config });
@@ -33,11 +33,11 @@ const BlogsSection = async () => {
         </p>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {blogs.map((blog: Record<string, unknown>) => (
-          <BlogCardHome
-            key={blog.id as string}
-            title={blog.title as string}
-            slug={blog.slug as string}
+        {blogs.map((blog) => (
+          <BlogCard
+            key={blog.id}
+            title={blog.title}
+            slug={blog.slug}
             image={
               blog.image && typeof blog.image === "object"
                 ? {
@@ -46,7 +46,7 @@ const BlogsSection = async () => {
                   }
                 : null
             }
-            createdAt={blog.createdAt as string}
+            createdAt={blog.createdAt}
           />
         ))}
       </div>

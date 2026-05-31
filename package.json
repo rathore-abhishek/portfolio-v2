@@ -10,9 +10,11 @@
     "lint:eslint": "eslint",
     "lint:knip": "knip",
     "format": "prettier --write .",
-    "generate:importmap": "payload generate:importmap",
-    "generate:types": "payload generate:types"
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types"
   },
+  "type": "module",
   "dependencies": {
     "@payloadcms/db-postgres": "^3.85.0",
     "@payloadcms/next": "^3.85.0",
@@ -24,6 +26,7 @@
     "@uidotdev/usehooks": "^2.4.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cross-env": "^10.1.0",
     "motion": "^12.23.26",
     "next": "16.1.1",
     "next-themes": "^0.4.6",

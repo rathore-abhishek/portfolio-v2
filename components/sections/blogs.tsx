@@ -4,7 +4,7 @@ import Link from "next/link";
 import Divider from "../divider";
 import Container from "../container";
 import Share from "../icons/share";
-import BlogCardHome from "../blog-card-home";
+import BlogCard from "../blog-card";
 
 const BlogsSection = async () => {
   const payload = await getPayload({ config });
@@ -40,11 +40,11 @@ const BlogsSection = async () => {
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
-          {blogs.map((blog: Record<string, unknown>) => (
-            <BlogCardHome
-              key={blog.id as string}
-              title={blog.title as string}
-              slug={blog.slug as string}
+          {blogs.map((blog) => (
+            <BlogCard
+              key={blog.id}
+              title={blog.title}
+              slug={blog.slug}
               image={
                 blog.image && typeof blog.image === "object"
                   ? {
@@ -53,7 +53,7 @@ const BlogsSection = async () => {
                     }
                   : null
               }
-              createdAt={blog.createdAt as string}
+              createdAt={blog.createdAt}
             />
           ))}
         </div>
