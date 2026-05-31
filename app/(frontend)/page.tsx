@@ -2,6 +2,7 @@ import { Banner } from "@/components/banner";
 // import { CloudBackground } from "@/components/cloud-background";
 import Divider from "@/components/divider";
 import { ProfileHeader } from "@/components/profile-header";
+import { Blogs } from "@/components/sections/blogs";
 // import Scale from "@/components/scale";
 // import { Blogs } from "@/components/sections/blogs";
 import { CTA } from "@/components/sections/cta";
@@ -26,6 +27,8 @@ export default function Home() {
       <Projects />
       <Divider />
       <SkillsSection />
+      <Divider />
+      <Blogs />
       <Divider />
       <CTA />
       <Divider className="mb-0" />

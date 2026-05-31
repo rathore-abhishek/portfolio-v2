@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Share from "../icons/share";
+import Container from "../container";
 
 const BLOG_POSTS = [
   {
@@ -106,13 +107,13 @@ const BlogCard = ({ post }: { post: (typeof BLOG_POSTS)[0] }) => {
 
 export const Blogs = () => {
   return (
-    <section className="px-8">
+    <Container className="px-8">
       <div className="mb-4 flex items-baseline justify-between">
         <h2 className="font-serif text-xl text-black/50 italic dark:text-white/40">
           My Thoughts
         </h2>
 
-        <a className="inline-flex cursor-pointer items-center gap-1 text-xs font-semibold text-white/30 transition-colors duration-200 hover:text-white">
+        <a className="inline-flex cursor-pointer items-center gap-1 text-xs font-medium text-black/30 transition-colors duration-200 hover:text-black/90 dark:text-white/30 dark:hover:text-white/90">
           ALL <Share />
         </a>
       </div>
@@ -122,6 +123,6 @@ export const Blogs = () => {
           <BlogCard key={post.id} post={post} />
         ))}
       </div>
-    </section>
+    </Container>
   );
 };

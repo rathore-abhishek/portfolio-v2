@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: "/admin/",
     },
-    sitemap: "https://rathore-abhishek.vercel.app/sitemap.xml",
+    sitemap: "https://abhiishekrathore.com/sitemap.xml",
   };
 }

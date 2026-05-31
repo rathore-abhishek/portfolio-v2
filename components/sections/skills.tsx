@@ -76,7 +76,9 @@ export const SkillsSection = () => {
                       alt={skill.name}
                       width={40}
                       height={40}
+                      draggable={false}
                       className="h-8 w-8 object-contain md:h-10 md:w-10"
+                      // style={{ WebkitUserDrag: "none" }}
                     />
                   ) : (
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-black/10 text-[10px] font-bold md:h-10 md:w-10 dark:border-white/10">
