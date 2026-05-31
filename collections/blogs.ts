@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "payload";
+import { revalidatePath } from "next/cache";
 
 export const Blogs: CollectionConfig = {
   slug: "blogs",
@@ -17,6 +18,33 @@ export const Blogs: CollectionConfig = {
     drafts: {
       autosave: false,
     },
+  },
+  hooks: {
+    afterChange: [
+      ({ doc, previousDoc }) => {
+        revalidatePath("/");
+        revalidatePath("/blogs");
+        if (doc && typeof doc.slug === "string") {
+          revalidatePath(`/blogs/${doc.slug}`);
+        }
+        if (
+          previousDoc &&
+          typeof previousDoc.slug === "string" &&
+          previousDoc.slug !== doc?.slug
+        ) {
+          revalidatePath(`/blogs/${previousDoc.slug}`);
+        }
+      },
+    ],
+    afterDelete: [
+      ({ doc }) => {
+        revalidatePath("/");
+        revalidatePath("/blogs");
+        if (doc && typeof doc.slug === "string") {
+          revalidatePath(`/blogs/${doc.slug}`);
+        }
+      },
+    ],
   },
   defaultSort: "-createdAt",
   timestamps: true,
