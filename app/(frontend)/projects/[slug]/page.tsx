@@ -16,13 +16,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = projectsData[slug];
   if (!project) return { title: "Project Not Found" };
 
+  const imageUrl = project.images[0]?.src;
+
   return {
-    title: `${project.title} - Abhishek Rathore`,
+    title: `${project.title} — Abhishek Rathore`,
     description: project.description,
     openGraph: {
-      title: `${project.title} - Abhishek Rathore`,
+      title: `${project.title} — Abhishek Rathore`,
       description: project.description,
-      images: project.images[0]?.src ? [{ url: project.images[0].src }] : [],
+      type: "article",
+      siteName: "Abhishek Rathore",
+      images: imageUrl ? [{ url: imageUrl }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — Abhishek Rathore`,
+      description: project.description,
+      creator: "@abhiishekz",
+      images: imageUrl ? [imageUrl] : [],
     },
   };
 }

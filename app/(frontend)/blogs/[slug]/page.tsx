@@ -19,16 +19,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     collection: "blogs",
     depth: 1,
     where: { slug: { equals: slug } },
-    select: { title: true },
+    select: { title: true, image: true },
   });
 
   const blog = docs[0] as Record<string, unknown> | undefined;
   if (!blog) return { title: "Blog Not Found" };
 
+  const blogTitle = blog.title as string;
+  const blogImage = blog.image;
+  const imageUrl =
+    blogImage && typeof blogImage === "object"
+      ? (blogImage as { url?: string }).url ?? undefined
+      : undefined;
+
   return {
-    title: `${blog.title} - Abhishek Rathore`,
+    title: `${blogTitle} — Abhishek Rathore`,
+    description: blogTitle,
     openGraph: {
-      title: `${blog.title} - Abhishek Rathore`,
+      title: `${blogTitle} — Abhishek Rathore`,
+      description: blogTitle,
+      type: "article",
+      siteName: "Abhishek Rathore",
+      images: imageUrl ? [{ url: imageUrl }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${blogTitle} — Abhishek Rathore`,
+      description: blogTitle,
+      creator: "@abhiishekz",
+      images: imageUrl ? [imageUrl] : [],
     },
   };
 }
