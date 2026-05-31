@@ -1,6 +1,14 @@
 import { withPayload } from "@payloadcms/next/withPayload";
+import { NextConfig } from "next";
 
-const nextConfig = {
-  // Your Next.js config here
+const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "utfs.io",
+      },
+    ],
+  },
 };
 export default withPayload(nextConfig);

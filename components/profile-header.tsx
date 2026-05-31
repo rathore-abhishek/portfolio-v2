@@ -72,8 +72,11 @@ export function ProfileHeader({
               </span>
               Available for work
             </p>
-            <div className="flex flex-col items-end font-mono text-[10px] text-black/40 sm:text-xs dark:text-white/40">
-              <span className="font-medium">
+            <div
+              suppressHydrationWarning
+              className="flex flex-col items-end font-mono text-[10px] text-black/40 sm:text-xs dark:text-white/40"
+            >
+              <span className="font-medium" suppressHydrationWarning>
                 <Clock />
               </span>
               {hourDiff !== 0 && (

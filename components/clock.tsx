@@ -1,22 +1,20 @@
 import { useState, useEffect } from "react";
 
 export function Clock() {
-  // 1. Initialize state with the current time
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState<Date | null>(null);
 
   useEffect(() => {
-    // 2. Set up an interval to update the time every 1000 milliseconds (1 second)
+    setCurrentTime(new Date());
     const timerId = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
+    return () => clearInterval(timerId);
+  }, []);
 
-    // 3. Clean up the interval when the component unmounts
-    return () => {
-      clearInterval(timerId);
-    };
-  }, []); // The empty dependency array ensures this effect runs only once on mount
+  if (!currentTime) {
+    return null;
+  }
 
-  // 4. Render the formatted time in "03/01/2025, 11:54:20 PM IST" format
   const formattedTime = currentTime
     .toLocaleString("en-IN", {
       timeZone: "Asia/Kolkata",

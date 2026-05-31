@@ -79,8 +79,8 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Script
-          defer
           src="https://cloud.umami.is/script.js"
+          strategy="lazyOnload"
           data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
         />
       </body>

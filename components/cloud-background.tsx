@@ -12,6 +12,7 @@ export function CloudBackground() {
             src="/clouds/elipse.svg"
             alt=""
             fill
+            sizes="800px"
             className="object-contain"
             priority
           />
@@ -31,6 +32,7 @@ export function CloudBackground() {
             src="/clouds/elipse.svg"
             alt=""
             fill
+            sizes="700px"
             className="rotate-180 object-contain"
             priority
           />
@@ -51,6 +53,7 @@ export function CloudBackground() {
             src="/clouds/elipse.svg"
             alt=""
             fill
+            sizes="650px"
             className="rotate-180 object-contain"
           />
           <Image
@@ -70,6 +73,7 @@ export function CloudBackground() {
             src="/clouds/elipse.svg"
             alt=""
             fill
+            sizes="500px"
             className="object-contain"
           />
           <Image

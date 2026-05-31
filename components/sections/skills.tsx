@@ -78,7 +78,7 @@ export const SkillsSection = () => {
                       height={40}
                       draggable={false}
                       className="h-8 w-8 object-contain md:h-10 md:w-10"
-                      // style={{ WebkitUserDrag: "none" }}
+                      style={{ width: "auto", height: "auto" }}
                     />
                   ) : (
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-black/10 text-[10px] font-bold md:h-10 md:w-10 dark:border-white/10">
