@@ -1,6 +1,7 @@
 "use client";
 
 import Share from "@/components/icons/share";
+import Tick from "@/components/icons/tick";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -9,23 +10,24 @@ interface ShareButtonProps {
   url: string;
 }
 
-const ShareButton = ({ title, url }: ShareButtonProps) => {
+const ShareButton = ({ url }: ShareButtonProps) => {
   const [copied, setCopied] = useState(false);
 
   const handleShare = async () => {
-    if (navigator.share) {
-      await navigator.share({ title, url });
-    } else {
-      await navigator.clipboard.writeText(url);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
+    await navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
-    <Button variant="outline" size="icon" className="group" onClick={handleShare}>
+    <Button
+      variant="outline"
+      size="icon"
+      className="group"
+      onClick={handleShare}
+    >
       {copied ? (
-        <span className="text-xs text-green-600 dark:text-green-400">✓</span>
+        <Tick className="text-xs text-green-600 dark:text-green-400"></Tick>
       ) : (
         <Share className="size-3.5 opacity-60 transition-opacity group-hover:opacity-100" />
       )}

@@ -26,9 +26,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!blog) return { title: "Blog Not Found" };
 
   return {
-    title: `${blog.title} — Abhishek Rathore`,
+    title: `${blog.title} - Abhishek Rathore`,
     openGraph: {
-      title: `${blog.title} — Abhishek Rathore`,
+      title: `${blog.title} - Abhishek Rathore`,
     },
   };
 }
@@ -47,7 +47,6 @@ async function BlogPage({ params }: Props) {
       content: true,
       createdAt: true,
       image: true,
-      category: true,
     },
   });
 
@@ -68,14 +67,6 @@ async function BlogPage({ params }: Props) {
             ? {
                 url: (blog.image as { url: string }).url,
                 alt: (blog.image as { alt?: string | null }).alt,
-              }
-            : null
-        }
-        category={
-          blog.category && typeof blog.category === "object"
-            ? {
-                name: (blog.category as { name: string }).name,
-                slug: (blog.category as { slug?: string }).slug,
               }
             : null
         }
