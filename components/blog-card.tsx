@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import NoImage from "./icons/no-image";
 
 interface BlogCardHomeProps {
   title: string;
@@ -31,10 +32,8 @@ const BlogCardHome = ({ title, slug, image, createdAt }: BlogCardHomeProps) => {
                 className="rounded-sm object-cover"
               />
             ) : (
-              <div className="flex h-full items-center justify-center">
-                <span className="font-serif text-4xl italic text-black/20 dark:text-white/20">
-                  {title.charAt(0)}
-                </span>
+              <div className="bg-accent flex h-full items-center justify-center">
+                <NoImage className="size-4.5 opacity-50" />
               </div>
             )}
           </motion.div>

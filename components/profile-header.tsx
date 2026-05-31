@@ -77,7 +77,10 @@ export function ProfileHeader({
                 <Clock />
               </span>
               {hourDiff !== 0 && (
-                <span className="text-[9px] text-black/20 sm:text-[10px] dark:text-white/20">
+                <span
+                  suppressHydrationWarning
+                  className="text-[9px] text-black/20 sm:text-[10px] dark:text-white/20"
+                >
                   {hourDiff > 0
                     ? `// ${Math.abs(hourDiff)}h ahead`
                     : `// ${Math.abs(hourDiff)}h behind`}
