@@ -21,10 +21,10 @@ const BlogDetails = ({
   image,
 }: BlogDetailProps) => {
   return (
-    <Container className="flex-1 px-9">
-      <article className="flex flex-col gap-6">
+    <Container className="flex-1 px-8">
+      <article className="flex flex-col">
         {image && (
-          <div className="relative aspect-video overflow-hidden rounded-lg bg-black/5 dark:bg-white/5">
+          <div className="relative mb-6 aspect-video overflow-hidden rounded-lg bg-black/5 dark:bg-white/5">
             <Image
               src={image.url}
               alt={image.alt ?? title}
@@ -34,7 +34,7 @@ const BlogDetails = ({
             />
           </div>
         )}
-        <div className="flex items-start justify-between gap-4">
+        <div className="mb-6 flex items-start justify-between gap-4">
           <div className="w-full space-y-2">
             <h1 className="font-serif text-5xl font-medium text-black dark:text-white">
               {title}
@@ -60,7 +60,7 @@ const BlogDetails = ({
           </div>
         </div>
 
-        <div className="prose prose-neutral prose-headings:font-serif prose-headings:font-normal dark:prose-invert max-w-none border-t">
+        <div className="prose prose-neutral dark:prose-invert max-w-none border-t">
           <RichText data={content} />
         </div>
       </article>
