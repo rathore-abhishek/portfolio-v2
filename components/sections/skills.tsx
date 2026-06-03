@@ -71,15 +71,15 @@ export const SkillsSection = () => {
                   {skill.icon ? (
                     <skill.icon className="h-8 w-8 text-black md:h-10 md:w-10 dark:text-white" />
                   ) : skill.image ? (
-                    <Image
-                      src={skill.image}
-                      alt={skill.name}
-                      width={40}
-                      height={40}
-                      draggable={false}
-                      className="h-8 w-8 object-contain md:h-10 md:w-10"
-                      style={{ width: "auto", height: "auto" }}
-                    />
+                    <div className="relative h-8 w-8 md:h-10 md:w-10">
+                      <Image
+                        src={skill.image}
+                        alt={skill.name}
+                        fill
+                        draggable={false}
+                        className="object-contain"
+                      />
+                    </div>
                   ) : (
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-black/10 text-[10px] font-bold md:h-10 md:w-10 dark:border-white/10">
                       {skill.name.substring(0, 2).toUpperCase()}
