@@ -32,13 +32,9 @@ const ProjectCard = ({
   return (
     <Link
       href={`/projects/${slug}`}
-      viewTransition
       className="group flex cursor-pointer flex-col gap-4 rounded-lg pb-4 transition-shadow duration-300 hover:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:hover:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
     >
-      <div
-        className="relative aspect-60/40 overflow-hidden rounded-lg transition-all duration-300 group-hover:scale-[1.05]"
-        style={{ viewTransitionName: `project-img-${slug}` } as React.CSSProperties}
-      >
+      <div className="relative aspect-60/40 overflow-hidden rounded-lg transition-all duration-300 group-hover:scale-[1.05]">
         <Image
           src={image}
           alt={title}
@@ -48,10 +44,7 @@ const ProjectCard = ({
         />
       </div>
       <div className="flex flex-col gap-1 transition-all duration-300 group-hover:translate-x-4">
-        <h4
-          className="text-base font-semibold text-black dark:text-white"
-          style={{ viewTransitionName: `project-title-${slug}` } as React.CSSProperties}
-        >
+        <h4 className="text-base font-semibold text-black dark:text-white">
           {title}
         </h4>
         <p className="w-[calc(100%-1.5rem)] text-sm text-black/50 dark:text-white/50">

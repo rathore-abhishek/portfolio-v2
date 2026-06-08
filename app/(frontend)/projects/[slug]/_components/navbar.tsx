@@ -18,7 +18,6 @@ const Navbar = () => {
             </Link>
             <Link
               href={"/projects"}
-              viewTransition
               className="group cursor-pointer rounded-full p-1.5 transition-colors hover:bg-black/5"
             >
               <Back className="size-4 opacity-40 transition-opacity group-hover:opacity-80" />

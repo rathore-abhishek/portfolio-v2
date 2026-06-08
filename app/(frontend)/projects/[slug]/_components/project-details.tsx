@@ -94,10 +94,7 @@ const ProjectDetails = ({ project }: Props) => {
       <div className="flex flex-col gap-5">
         <div className="flex items-start justify-between gap-4">
           <div className="space-y-1.5">
-            <h1
-              className="text-3xl font-medium tracking-tight text-black dark:text-white"
-              style={{ viewTransitionName: `project-title-${project.id}` } as React.CSSProperties}
-            >
+            <h1 className="text-3xl font-medium tracking-tight text-black dark:text-white">
               {project.title}
             </h1>
           </div>
@@ -165,10 +162,7 @@ const ProjectDetails = ({ project }: Props) => {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          <div
-            className="relative aspect-video overflow-hidden rounded-lg bg-black/5 dark:bg-white/5"
-            style={{ viewTransitionName: `project-img-${project.id}` } as React.CSSProperties}
-          >
+          <div className="relative aspect-video overflow-hidden rounded-lg bg-black/5 dark:bg-white/5">
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
