@@ -59,6 +59,7 @@ const Pagination = ({ prev, next }: PaginationProps) => {
         {prev ? (
           <Link
             href={`/projects/${prev.slug}`}
+            viewTransition
             className="group flex flex-col items-start gap-0.5"
           >
             <span className="flex items-center gap-1 text-xs font-medium text-black/30 transition-colors duration-200 group-hover:text-black/60 dark:text-white/30 dark:group-hover:text-white/60">
@@ -88,6 +89,7 @@ const Pagination = ({ prev, next }: PaginationProps) => {
         {next ? (
           <Link
             href={`/projects/${next.slug}`}
+            viewTransition
             className="group flex flex-col items-end gap-0.5 text-right"
           >
             <span className="flex items-center gap-1 text-xs font-medium text-black/30 transition-colors duration-200 group-hover:text-black/60 dark:text-white/30 dark:group-hover:text-white/60">

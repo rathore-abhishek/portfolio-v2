@@ -8,11 +8,6 @@ import { Button } from "./ui/button";
 import X from "./icons/x";
 import Image from "next/image";
 import LinkedIn from "./icons/linkedin";
-import TypeScript from "./icons/typescript";
-import ReactIcon from "./icons/react";
-import NextJS from "./icons/nextjs";
-import Bun from "./icons/bun";
-import PostgreSQL from "./icons/postgresql";
 import DM from "./icons/dm";
 import Mail from "./icons/mail";
 import ThemeToggle from "./theme-toggle";
@@ -20,7 +15,6 @@ import Container from "./container";
 
 interface ProfileHeaderProps {
   name?: string;
-  age?: string;
   title?: string;
   profileImage?: string;
   socialLinks?: {
@@ -33,7 +27,6 @@ interface ProfileHeaderProps {
 
 export function ProfileHeader({
   name = "Abhishek Rathore",
-  age = "16",
   profileImage = "/me.png",
   socialLinks = {
     twitter: "https://x.com/abhiishekz",
@@ -98,21 +91,21 @@ export function ProfileHeader({
               {name}
             </h1>
             <div className="font-manrope flex flex-wrap items-center gap-1 text-xs font-medium text-black/40 sm:text-sm dark:text-white/40">
-              <p>Full-Stack developer — I can</p>
+              <p>Designer & developer & Developer — I</p>
               <div className="ml-1 inline-block items-center text-black dark:text-white">
                 <Typewriter
                   options={{
                     strings: [
-                      "Design accessible components",
-                      "Ship modern frontend experience",
-                      "Animate with precision",
-                      "Craft pixel-perfect interfaces",
-                      "Develop interactive dashboards",
+                      "Design conversion-focused websites",
+                      "Build scalable product interfaces",
+                      "Ship high-converting B2C experiences",
+                      "Create for B2B brands",
+                      "Craft seamless user journeys",
                     ],
                     autoStart: true,
                     loop: true,
-                    delay: 50, // typing speed (ms per character)
-                    deleteSpeed: 30, // deleting speed (ms per character)
+                    delay: 50,
+                    deleteSpeed: 30,
                   }}
                 />
               </div>
@@ -221,68 +214,31 @@ export function ProfileHeader({
           </div>
         </div>
         <div className="mt-4 px-4 text-base leading-loose tracking-wider text-black/50 sm:px-8 dark:text-white/50">
-          <span className="text-black/50 dark:text-white/50">
-            I&apos;m a{" "}
-            <span className="font-medium text-black dark:text-white">
-              {age} y/o
-            </span>{" "}
-            developer{" "}
-            <span className="font-medium text-black dark:text-white">
-              building from zero.{" "}
-            </span>{" "}
+          I design{" "}
+          <span className="font-medium text-black dark:text-white">
+            conversion-focused
+          </span>{" "}
+          websites and{" "}
+          <span className="font-medium text-black dark:text-white">
+            scalable product interfaces
+          </span>{" "}
+          for{" "}
+          <span className="font-medium text-black dark:text-white">
+            startups
           </span>
-          <span>
-            Including frontend, backend, full-stack applications, and AI-powered
-            experiences using{" "}
-          </span>
-          <a
-            target="_blank"
-            className="skill-inner-shadow inline-flex items-center rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 align-middle text-sm text-black dark:border-white/30 dark:bg-white/5 dark:text-white"
-            href="https://www.typescriptlang.org/"
-          >
-            <TypeScript className="size-4 shrink-0" />
-            <p className="ml-1 text-sm font-bold">Typescript</p>
-          </a>
-          <span>, </span>
-          <a
-            target="_blank"
-            className="skill-inner-shadow inline-flex items-center rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 align-middle text-sm text-black dark:border-white/30 dark:bg-white/5 dark:text-white"
-            href="https://react.dev/"
-          >
-            <ReactIcon />
-            <p className="ml-1 text-sm font-bold">React</p>
-          </a>
-          <span>, </span>
-          <a
-            target="_blank"
-            className="skill-inner-shadow inline-flex items-center rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 align-middle text-sm text-black dark:border-white/30 dark:bg-white/5 dark:text-white"
-            href="https://nextjs.org/"
-          >
-            <NextJS />
-            <p className="ml-1 text-sm font-bold">Next.js</p>
-          </a>
-          <span>, </span>
-          <a
-            target="_blank"
-            className="skill-inner-shadow inline-flex items-center rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 align-middle text-sm text-black dark:border-white/30 dark:bg-white/5 dark:text-white"
-            href="https://bun.sh/"
-          >
-            <Bun />
-            <p className="ml-1 text-sm font-bold">Bun</p>
-          </a>
-          <span>, and </span>
-          <a
-            target="_blank"
-            className="skill-inner-shadow inline-flex items-center rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 align-middle text-sm text-black dark:border-white/30 dark:bg-white/5 dark:text-white"
-            href="https://www.postgresql.org/"
-          >
-            <PostgreSQL />
-            <p className="ml-1 text-sm font-bold">PostgreSQL</p>
-          </a>
-          <span>
-            , and I turn concepts into clean, efficient, and user-friendly
-            digital experiences with a keen eye for design.
-          </span>
+          . I&apos;m Abhishek, an{" "}
+          <span className="font-medium text-black dark:text-white">
+            India-based designer & developer
+          </span>{" "}
+          who specializes in building{" "}
+          <span className="font-medium text-black dark:text-white">
+            high-converting
+          </span>{" "}
+          websites for{" "}
+          <span className="font-medium text-black dark:text-white">B2C</span>{" "}
+          and{" "}
+          <span className="font-medium text-black dark:text-white">B2B</span>{" "}
+          brands.
         </div>
         <div className="mt-4 flex items-center px-4 sm:px-8">
           <Button variant="outline" className="" size={"sm"} asChild>
