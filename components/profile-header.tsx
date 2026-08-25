@@ -27,7 +27,7 @@ interface ProfileHeaderProps {
 
 export function ProfileHeader({
   name = "Abhishek Rathore",
-  profileImage = "/me.png",
+  profileImage = "/me.jpg",
   socialLinks = {
     twitter: "https://x.com/abhiishekz",
     github: "https://github.com/rathore-abhishek",
