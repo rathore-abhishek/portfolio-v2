@@ -91,7 +91,7 @@ export function ProfileHeader({
               {name}
             </h1>
             <div className="font-manrope flex flex-wrap items-center gap-1 text-xs font-medium text-black/40 sm:text-sm dark:text-white/40">
-              <p>Designer & developer & Developer — I</p>
+              <p>Design Engineer — I</p>
               <div className="ml-1 inline-block items-center text-black dark:text-white">
                 <Typewriter
                   options={{
