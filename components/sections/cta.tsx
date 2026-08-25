@@ -28,7 +28,7 @@ export function CTA() {
                   width={20}
                   height={20}
                   className="h-full w-full rounded-full bg-zinc-900 object-cover dark:bg-white"
-                  src={"/me.png"}
+                  src={"/me.jpg"}
                 />
               </div>
               <div className="absolute left-[24px] flex -translate-x-full transform items-center gap-0 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
