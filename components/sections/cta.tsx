@@ -94,7 +94,7 @@ export function CTA() {
           </p>
         </a>
         <a
-          href="https://x.com/abhiishekz"
+          href="https://x.com/abhiishek_raw"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-background z-5 -mr-1 flex w-13 -rotate-2 cursor-pointer flex-col items-center gap-0.5 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 group-hover:mr-2 group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"

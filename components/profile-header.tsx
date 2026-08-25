@@ -29,7 +29,7 @@ export function ProfileHeader({
   name = "Abhishek Rathore",
   profileImage = "/me.jpg",
   socialLinks = {
-    twitter: "https://x.com/abhiishekz",
+    twitter: "https://x.com/abhiishek_raw",
     github: "https://github.com/rathore-abhishek",
     linkedin: "https://www.linkedin.com/in/rathore-abhishekk/",
     resume: "https://www.instagram.com/rathore.abhishekk",
@@ -243,7 +243,7 @@ export function ProfileHeader({
         <div className="mt-4 flex items-center px-4 sm:px-8">
           <Button variant="outline" className="" size={"sm"} asChild>
             <a
-              href="https://x.com/messages/compose?recipient_id=1828108311901966337"
+              href="https://x.com/messages/compose?recipient_id=2036748989337649152"
               target="_blank"
               rel="noopener noreferrer"
             >
