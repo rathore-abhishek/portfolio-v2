@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Abhishek Rathore",
     description:
       "I build cool things from zero. Full-stack developer shipping modern experiences.",
-    creator: "@abhiishekz",
+    creator: "@abhiishek_raw",
   },
 };
 
