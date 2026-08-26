@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Scale from "@/components/scale";
+import { FloatingNav } from "@/components/floating-nav";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -76,6 +77,7 @@ export default function RootLayout({
             <div className="border-border ring-0.5 ring-border z-10 mx-auto min-h-screen w-full overflow-y-clip border-x">
               {children}
             </div>
+            {/* <FloatingNav /> */}
           </div>
         </ThemeProvider>
         <Script

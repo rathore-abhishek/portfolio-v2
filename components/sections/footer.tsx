@@ -11,16 +11,16 @@ const Footer = async () => {
         <p className="font-mono text-xs text-black/40 dark:text-white/40">
           © 2026 All rights reserved.
         </p>
-        {/* <p className="font-mono text-xs font-medium text-black/40 dark:text-white/40">
-        Designed{" "}
-        <span className="font-serif text-lg text-black italic dark:text-white">
-          &
-        </span>{" "}
-        Developed by{" "}
-        <span className="font-semibold text-black dark:text-white">
-          Abhishek
-        </span>
-      </p> */}
+        <p className="font-mono text-xs font-medium text-black/40 dark:text-white/40">
+          Designed{" "}
+          <span className="font-serif text-lg text-black italic dark:text-white">
+            &
+          </span>{" "}
+          Developed by{" "}
+          <span className="font-semibold text-black dark:text-white">
+            Abhishek
+          </span>
+        </p>
 
         {views !== null && views > 0 && (
           <p className="font-mono text-xs font-medium text-black/40 dark:text-white/40">
