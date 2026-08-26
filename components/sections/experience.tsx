@@ -1,12 +1,68 @@
 "use client";
 import Image from "next/image";
+import { AnimatePresence, motion } from "motion/react";
 import React, { useState } from "react";
+import type { ReactNode } from "react";
 import ArrowUp from "../icons/arrow-up";
+import ReactIcon from "../icons/react";
+import NextJS from "../icons/nextjs";
+import TypeScript from "../icons/typescript";
+import TailwindCSS from "../icons/tailwind";
+import Sanity from "../icons/sanity";
+import Supabase from "../icons/supabase";
+import Motion from "../icons/motion";
+import Plasmo from "../icons/plasmo";
+import Git from "../icons/git";
 import { cn } from "@/lib/utils";
 import Container from "../container";
 
+const tools: { id: string; label: string; icon: ReactNode }[] = [
+  {
+    id: "react",
+    label: "React",
+    icon: <ReactIcon className="size-4 shrink-0" />,
+  },
+  {
+    id: "nextjs",
+    label: "Next.js",
+    icon: <NextJS className="size-4 shrink-0" />,
+  },
+  {
+    id: "typescript",
+    label: "TypeScript",
+    icon: <TypeScript className="size-4 shrink-0" />,
+  },
+  {
+    id: "tailwind",
+    label: "Tailwind CSS",
+    icon: <TailwindCSS className="size-4 shrink-0" />,
+  },
+  {
+    id: "sanity",
+    label: "Sanity",
+    icon: <Sanity className="size-4 shrink-0" />,
+  },
+  {
+    id: "supabase",
+    label: "Supabase",
+    icon: <Supabase className="size-4 shrink-0" />,
+  },
+  {
+    id: "motion",
+    label: "Motion",
+    icon: <Motion className="size-4 shrink-0" />,
+  },
+  {
+    id: "plasmo",
+    label: "Plasmo",
+    icon: <Plasmo className="size-4 shrink-0" />,
+  },
+  { id: "git", label: "Git", icon: <Git className="size-4 shrink-0" /> },
+];
+
 const ExperienceSection = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hoveredTool, setHoveredTool] = useState<string | null>(null);
 
   return (
     <Container className="px-8">
@@ -47,7 +103,7 @@ const ExperienceSection = () => {
                 />
               </div>
               <p className="text-xs font-medium whitespace-nowrap text-black/50 sm:text-sm dark:text-white/40">
-                Full-Stack Developer
+                SDE-L1 (Full Stack)
               </p>
             </div>
           </div>
@@ -97,6 +153,66 @@ const ExperienceSection = () => {
                   </li>
                 ))}
               </ul>
+
+              <div>
+                <p className="mb-2 text-xs font-medium text-black/40 dark:text-white/40">
+                  Tools &amp; Technologies
+                </p>
+                <div className="flex flex-wrap items-center gap-x-1.5 gap-y-2">
+                  {tools.map((tool) => {
+                    const isHovered = hoveredTool === tool.id;
+                    return (
+                      <motion.div
+                        key={tool.id}
+                        className="flex h-7 cursor-pointer items-center rounded-full border border-black/5 bg-white shadow-sm dark:border-white/5 dark:bg-white/5"
+                        animate={{
+                          width: isHovered ? "auto" : "28px",
+                        }}
+                        onMouseEnter={() => setHoveredTool(tool.id)}
+                        onMouseLeave={() => setHoveredTool(null)}
+                        layout
+                        transition={{
+                          duration: 0.25,
+                          ease: [0.4, 0, 0.2, 1],
+                        }}
+                      >
+                        <div className="flex h-7 w-7 shrink-0 items-center justify-center">
+                          <div className="flex h-4 w-4 items-center justify-center">
+                            {tool.icon}
+                          </div>
+                        </div>
+
+                        <AnimatePresence>
+                          {isHovered && (
+                            <motion.span
+                              className="overflow-hidden pr-2 text-xs font-medium"
+                              initial={{
+                                width: 0,
+                                opacity: 0,
+                                marginLeft: 0,
+                              }}
+                              animate={{
+                                width: "auto",
+                                opacity: 1,
+                                marginLeft: "4px",
+                              }}
+                              exit={{ width: 0, opacity: 0, marginLeft: 0 }}
+                              transition={{
+                                duration: 0.2,
+                                ease: [0.4, 0, 0.2, 1],
+                              }}
+                            >
+                              <span className="whitespace-nowrap">
+                                {tool.label}
+                              </span>
+                            </motion.span>
+                          )}
+                        </AnimatePresence>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
