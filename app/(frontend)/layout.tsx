@@ -32,11 +32,11 @@ const neu = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Abhishek Rathore",
+  title: "Abhishek Rathore | Design Engineer",
   description:
     "I build cool things from zero. Full-stack developer focused on clean interfaces, smooth animations, and shipping modern experiences.",
   openGraph: {
-    title: "Abhishek Rathore",
+    title: "Abhishek Rathore | Design Engineer",
     description:
       "I build cool things from zero. Full-stack developer focused on clean interfaces, smooth animations, and shipping modern experiences.",
     type: "website",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Abhishek Rathore",
     description:
-      "I build cool things from zero. Full-stack developer shipping modern experiences.",
+      "I build cool things from zero. Designer & developer shipping modern experiences.",
     creator: "@abhiishek_raw",
   },
 };
