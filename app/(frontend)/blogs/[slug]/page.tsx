@@ -11,6 +11,20 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  const payload = await getPayload({ config });
+
+  const { docs } = await payload.find({
+    collection: "blogs",
+    depth: 0,
+    pagination: false,
+    where: { status: { equals: "published" } },
+    select: { slug: true },
+  });
+
+  return docs.map(({ slug }) => ({ slug }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const payload = await getPayload({ config });
@@ -18,7 +32,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { docs } = await payload.find({
     collection: "blogs",
     depth: 1,
-    where: { slug: { equals: slug } },
+    where: {
+      slug: { equals: slug },
+      status: { equals: "published" },
+    },
     select: { title: true, image: true },
   });
 
@@ -59,7 +76,10 @@ async function BlogPage({ params }: Props) {
   const { docs } = await payload.find({
     collection: "blogs",
     depth: 2,
-    where: { slug: { equals: slug } },
+    where: {
+      slug: { equals: slug },
+      status: { equals: "published" },
+    },
     select: {
       title: true,
       slug: true,

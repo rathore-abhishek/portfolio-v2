@@ -213,32 +213,28 @@ export function ProfileHeader({
             <ThemeToggle />
           </div>
         </div>
-        <div className="mt-4 px-4 text-base leading-loose tracking-wider text-black/50 sm:px-8 dark:text-white/50">
-          I design{" "}
+        <div className="mt-4 px-4 text-base leading-loose tracking-wider text-balance text-black/50 sm:px-8 dark:text-white/50">
+          I&apos;m Abhishek, an{" "}
           <span className="font-medium text-black dark:text-white">
+            India-based designer & developer
+          </span>
+          . I build{" "}
+          <span className="font-medium whitespace-nowrap text-black dark:text-white">
             conversion-focused
+          </span>
+          ,{" "}
+          <span className="font-medium whitespace-nowrap text-black dark:text-white">
+            high-converting
           </span>{" "}
           websites and{" "}
           <span className="font-medium text-black dark:text-white">
             scalable product interfaces
           </span>{" "}
           for{" "}
-          <span className="font-medium text-black dark:text-white">
-            startups
-          </span>
-          . I&apos;m Abhishek, an{" "}
-          <span className="font-medium text-black dark:text-white">
-            India-based designer & developer
-          </span>{" "}
-          who specializes in building{" "}
-          <span className="font-medium text-black dark:text-white">
-            high-converting
-          </span>{" "}
-          websites for{" "}
           <span className="font-medium text-black dark:text-white">B2C</span>{" "}
           and{" "}
           <span className="font-medium text-black dark:text-white">B2B</span>{" "}
-          brands.
+          startups.
         </div>
         <div className="mt-4 flex items-center px-4 sm:px-8">
           <Button variant="outline" className="" size={"sm"} asChild>
