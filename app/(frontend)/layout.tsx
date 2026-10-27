@@ -4,6 +4,7 @@ import Script from "next/script";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { TransitionProvider } from "@/components/transition-provider";
 import Scale from "@/components/scale";
 import { FloatingNav } from "@/components/floating-nav";
 
@@ -70,15 +71,20 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative min-h-dvh w-full overflow-clip">
-            <div className="relative mx-auto max-w-3xl">
-              <Scale count={50} />
+          <TransitionProvider>
+            <div
+              data-page-transition
+              className="relative min-h-dvh w-full overflow-clip"
+            >
+              <div className="relative mx-auto max-w-3xl">
+                <Scale count={50} />
+              </div>
+              <div className="border-border ring-0.5 ring-border z-10 mx-auto min-h-screen w-full overflow-y-clip border-x">
+                {children}
+              </div>
+              {/* <FloatingNav /> */}
             </div>
-            <div className="border-border ring-0.5 ring-border z-10 mx-auto min-h-screen w-full overflow-y-clip border-x">
-              {children}
-            </div>
-            {/* <FloatingNav /> */}
-          </div>
+          </TransitionProvider>
         </ThemeProvider>
         <Script
           src="https://cloud.umami.is/script.js"

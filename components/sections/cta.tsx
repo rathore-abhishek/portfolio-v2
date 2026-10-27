@@ -61,12 +61,12 @@ export function CTA() {
       <p className="py-2 text-center text-sm font-medium text-black/30 uppercase dark:text-white/30">
         or
       </p>
-      <div className="group flex items-center justify-center">
+      <div className="group flex items-center justify-center gap-1.5 sm:gap-0">
         <a
           href="https://github.com/rathore-abhishek"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-background -mr-1 flex w-13 -rotate-20 cursor-pointer flex-col items-center gap-1 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 group-hover:mr-2 group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
+          className="bg-background flex w-12 shrink-0 rotate-0 cursor-pointer flex-col items-center gap-1 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 sm:-mr-1 sm:w-13 sm:-rotate-20 sm:group-hover:mr-2 sm:group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
         >
           <Github className="size-5" />
           <p className="text-[8px] font-bold text-black/50 dark:text-white/50">
@@ -78,7 +78,7 @@ export function CTA() {
           href="https://www.instagram.com/rathore.abhishekk"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-background -mr-1 flex w-13 -rotate-10 cursor-pointer flex-col items-center gap-0.5 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 group-hover:mr-2 group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
+          className="bg-background flex w-12 shrink-0 rotate-0 cursor-pointer flex-col items-center gap-0.5 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 sm:-mr-1 sm:w-13 sm:-rotate-10 sm:group-hover:mr-2 sm:group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
         >
           <div className="size-5">
             <Image
@@ -97,7 +97,7 @@ export function CTA() {
           href="https://x.com/abhiishek_raw"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-background z-5 -mr-1 flex w-13 -rotate-2 cursor-pointer flex-col items-center gap-0.5 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 group-hover:mr-2 group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
+          className="bg-background z-5 flex w-12 shrink-0 rotate-0 cursor-pointer flex-col items-center gap-0.5 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 sm:-mr-1 sm:w-13 sm:-rotate-2 sm:group-hover:mr-2 sm:group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
         >
           <X className="size-5" />
           <p className="text-[8px] font-bold text-black/50 dark:text-white/50">
@@ -108,7 +108,7 @@ export function CTA() {
           href="https://www.linkedin.com/in/rathore-abhishekk/"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-background z-2 -mr-1 flex w-13 rotate-10 cursor-pointer flex-col items-center gap-0.5 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 group-hover:mr-2 group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
+          className="bg-background z-2 flex w-12 shrink-0 rotate-0 cursor-pointer flex-col items-center gap-0.5 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 sm:-mr-1 sm:w-13 sm:rotate-10 sm:group-hover:mr-2 sm:group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
         >
           <LinkedIn className="size-5" />
           <p className="text-[8px] font-bold text-black/50 dark:text-white/50">
@@ -117,7 +117,7 @@ export function CTA() {
         </a>
         <a
           href="mailto:rathore.abhiishekk@gmail.com"
-          className="bg-background z-1 -mr-1 flex w-13 rotate-20 cursor-pointer flex-col items-center gap-0.5 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 group-hover:mr-2 group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
+          className="bg-background z-1 flex w-12 shrink-0 rotate-0 cursor-pointer flex-col items-center gap-0.5 rounded-lg border border-black/20 p-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition-all duration-300 sm:-mr-1 sm:w-13 sm:rotate-20 sm:group-hover:mr-2 sm:group-hover:rotate-0 dark:shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.06),0px_1px_0px_0px_rgba(255,255,255,0.04),0px_0px_0px_1px_rgba(255,255,255,0.08)]"
         >
           <Mail className="size-5 opacity-40" />
           <p className="text-[8px] font-bold text-black/50 dark:text-white/50">

@@ -48,14 +48,23 @@ const details: ProjectDetail[] = [
       { label: "Cart", src: "/projects/divine-canvas/cart.png" },
       { label: "Orders", src: "/projects/divine-canvas/orders.png" },
       { label: "Payment", src: "/projects/divine-canvas/payment.png" },
-      { label: "Custom Order", src: "/projects/divine-canvas/custom-order.png" },
+      {
+        label: "Custom Order",
+        src: "/projects/divine-canvas/custom-order.png",
+      },
       { label: "Portfolio", src: "/projects/divine-canvas/portfolio.png" },
       { label: "Blogs", src: "/projects/divine-canvas/blogs.png" },
       { label: "Contact", src: "/projects/divine-canvas/contact.png" },
       { label: "Reviews", src: "/projects/divine-canvas/reviews.png" },
       { label: "Admin Panel", src: "/projects/divine-canvas/admin-panel.png" },
-      { label: "Personal Details", src: "/projects/divine-canvas/personal-details.png" },
-      { label: "Notifications", src: "/projects/divine-canvas/notifictions.png" },
+      {
+        label: "Personal Details",
+        src: "/projects/divine-canvas/personal-details.png",
+      },
+      {
+        label: "Notifications",
+        src: "/projects/divine-canvas/notifictions.png",
+      },
     ],
     techIds: [
       "nextjs",
@@ -75,7 +84,7 @@ const details: ProjectDetail[] = [
     description:
       "A place for developers to share their side projects and get feedback from peers.",
     longDescription:
-      "A platform where devs can share their side projects and get real feedback from other builders. Kept the UI clean and minimal so the projects speak for themselves — nothing flashy, just good typography and smooth interactions.",
+      "A platform where devs can share their side projects and get real feedback from other builders. Kept the UI clean and minimal so the projects speak for themselves. Nothing flashy, just good typography and smooth interactions.",
     images: [
       { label: "Website", src: "/rvyu.png" },
       { label: "Projects", src: "/projects/rvyu/projects.png" },
@@ -105,7 +114,7 @@ const details: ProjectDetail[] = [
     description:
       "SaaS website and dashboard with a custom CMS to manage blogs and pages.",
     longDescription:
-      "Marketing site with a headless CMS behind it. The CMS lets non-technical folks manage blog posts, pages, and e-books with a block editor — keeps everything clean and easy to update.",
+      "Marketing site with a headless CMS behind it. The CMS lets non-technical folks manage blog posts, pages, and e-books with a block editor. It keeps everything clean and easy to update.",
     images: [
       { label: "Website", src: "/projects/theleansuite/theleansuite.png" },
       { label: "Posts", src: "/projects/theleansuite/posts.png" },
@@ -131,7 +140,7 @@ const details: ProjectDetail[] = [
     description:
       "Public website and internal dashboard built for an Australian logistics firm.",
     longDescription:
-      "Public website plus an internal panel for managing the logistics side of things — blogs, career submissions, contact forms, and user profiles all in one place.",
+      "Public website plus an internal panel for managing the logistics side of things: blogs, career submissions, contact forms, and user profiles all in one place.",
     images: [
       { label: "Public Website", src: "/spf-logistics.png" },
       { label: "Login", src: "/projects/spf-logistics-panel/login.png" },

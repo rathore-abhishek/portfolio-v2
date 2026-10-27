@@ -46,9 +46,7 @@ const DisabledNav = ({ direction }: { direction: "prev" | "next" }) => (
         </svg>
       )}
     </span>
-    <h3 className="text-sm font-medium text-black dark:text-white/30">
-      — End —
-    </h3>
+    <h3 className="text-sm font-medium text-black dark:text-white/30">End</h3>
   </div>
 );
 

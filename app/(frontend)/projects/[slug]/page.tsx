@@ -19,10 +19,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const imageUrl = project.images[0]?.src;
 
   return {
-    title: `${project.title} — Abhishek Rathore`,
+    title: `${project.title} - Abhishek Rathore`,
     description: project.description,
     openGraph: {
-      title: `${project.title} — Abhishek Rathore`,
+      title: `${project.title} - Abhishek Rathore`,
       description: project.description,
       type: "article",
       siteName: "Abhishek Rathore",
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} — Abhishek Rathore`,
+      title: `${project.title} - Abhishek Rathore`,
       description: project.description,
       creator: "@abhiishekz",
       images: imageUrl ? [imageUrl] : [],

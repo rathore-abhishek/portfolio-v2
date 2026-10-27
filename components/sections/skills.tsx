@@ -51,7 +51,7 @@ export const SkillsSection = () => {
         Stack I use
       </h2>
       <TooltipProvider>
-        <div className="relative grid grid-cols-4 justify-items-center gap-8 sm:grid-cols-6 md:grid-cols-8 md:justify-items-start lg:grid-cols-12">
+        <div className="relative isolate grid grid-cols-4 justify-items-center gap-8 sm:grid-cols-6 md:grid-cols-8 md:justify-items-start lg:grid-cols-12">
           <span className="pointer-events-none absolute -top-12 right-0 size-12 -rotate-34 font-mono text-[10px] font-medium text-black/30 dark:text-white/10">
             drag me :D
           </span>
@@ -128,7 +128,7 @@ export const DraggableSkill = React.forwardRef<
         });
       }}
       whileTap={{ cursor: "grabbing" }}
-      className={`z-20 cursor-grab touch-none select-none active:cursor-grabbing ${
+      className={`z-20 cursor-grab touch-none mix-blend-multiply select-none active:cursor-grabbing dark:mix-blend-screen ${
         className ?? ""
       }`}
       {...props}

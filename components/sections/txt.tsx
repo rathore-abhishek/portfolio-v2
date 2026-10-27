@@ -80,7 +80,7 @@ export function Text() {
                 top: pos.y,
               }}
             >
-              {/* Tooltip content — inline, not reusable */}
+              {/* Tooltip content, inline, not reusable */}
               <div className="space-y-2 p-4">
                 <div className="flex items-baseline gap-2">
                   <span className="text-lg font-semibold text-black dark:text-white">

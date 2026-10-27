@@ -29,14 +29,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blogImage = blog.image;
   const imageUrl =
     blogImage && typeof blogImage === "object"
-      ? (blogImage as { url?: string }).url ?? undefined
+      ? ((blogImage as { url?: string }).url ?? undefined)
       : undefined;
 
   return {
-    title: `${blogTitle} — Abhishek Rathore`,
+    title: `${blogTitle} - Abhishek Rathore`,
     description: blogTitle,
     openGraph: {
-      title: `${blogTitle} — Abhishek Rathore`,
+      title: `${blogTitle} - Abhishek Rathore`,
       description: blogTitle,
       type: "article",
       siteName: "Abhishek Rathore",
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${blogTitle} — Abhishek Rathore`,
+      title: `${blogTitle} - Abhishek Rathore`,
       description: blogTitle,
       creator: "@abhiishekz",
       images: imageUrl ? [imageUrl] : [],

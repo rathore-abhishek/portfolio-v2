@@ -41,6 +41,7 @@ const ProjectsSection = () => {
             title={p.title}
             description={p.description}
             image={p.image}
+            link={p.link}
             techStack={p.techIds.map((id) => {
               const meta = techMeta[id];
               return {

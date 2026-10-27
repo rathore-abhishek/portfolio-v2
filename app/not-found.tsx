@@ -109,7 +109,7 @@ export default function NotFound() {
                     Looks like you wandered off
                   </h2>
                   <p className="text-sm text-black/50 dark:text-white/50">
-                    This page doesn&apos;t exist — or it&apos;s still being
+                    This page doesn&apos;t exist, or it&apos;s still being
                     built.
                   </p>
                 </div>

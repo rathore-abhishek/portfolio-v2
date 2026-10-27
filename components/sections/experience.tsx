@@ -403,10 +403,10 @@ const ExperienceSection = () => {
               </p>
               <ul className="space-y-3 pl-1">
                 {[
-                  "Leading 0→1 product as sole Founding Engineer for a stealth consumer social app — owning architecture, product and execution from Figma to production.",
-                  "Building cross-platform experience with Next.js (web) and React Native + Expo (mobile) in a shared TypeScript codebase — auth, feed, profiles and core community flows.",
+                  "Leading 0→1 product as sole Founding Engineer for a stealth consumer social app, owning architecture, product and execution from Figma to production.",
+                  "Building cross-platform experience with Next.js (web) and React Native + Expo (mobile) in a shared TypeScript codebase: auth, feed, profiles and core community flows.",
                   "Architecting internal ops tooling with Payload CMS and Cloudflare R2 for scalable file/media storage and content management.",
-                  "Shipping fast with a performant DX — Bun, Turborepo, strict TypeScript, and a Figma-driven design system for consistent UI across web and mobile.",
+                  "Shipping fast with a performant DX: Bun, Turborepo, strict TypeScript, and a Figma-driven design system for consistent UI across web and mobile.",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <span className="size-1.5 shrink-0 rounded-full bg-black/40 dark:bg-white/40" />

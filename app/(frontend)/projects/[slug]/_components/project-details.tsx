@@ -47,7 +47,6 @@ interface Props {
 
 const ProjectDetails = ({ project }: Props) => {
   const [current, setCurrent] = useState(0);
-  const [hoveredImage, setHoveredImage] = useState(false);
   const [paused, setPaused] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined);
   const touchStartX = useRef(0);
@@ -151,14 +150,8 @@ const ProjectDetails = ({ project }: Props) => {
 
         <div
           className="group relative my-2"
-          onMouseEnter={() => {
-            setPaused(true);
-            setHoveredImage(true);
-          }}
-          onMouseLeave={() => {
-            setPaused(false);
-            setHoveredImage(false);
-          }}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
@@ -174,7 +167,7 @@ const ProjectDetails = ({ project }: Props) => {
               >
                 <Image
                   src={project.images[current].src}
-                  alt={`${project.title} — ${project.images[current].label}`}
+                  alt={`${project.title} - ${project.images[current].label}`}
                   width={1200}
                   height={675}
                   className="h-full w-full object-contain"
@@ -198,73 +191,49 @@ const ProjectDetails = ({ project }: Props) => {
                 </AnimatePresence>
               </span>
             </div>
-
-            <AnimatePresence>
-              {hoveredImage && (
-                <>
-                  <motion.button
-                    initial={{ opacity: 0, x: -8 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -8 }}
-                    transition={{ duration: 0.15 }}
-                    onClick={prev}
-                    className="absolute top-1/2 left-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-white/10 p-2 text-white backdrop-blur-xs transition-all hover:bg-white/25"
-                  >
-                    <svg
-                      className="size-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15 19l-7-7 7-7"
-                      />
-                    </svg>
-                  </motion.button>
-                  <motion.button
-                    initial={{ opacity: 0, x: 8 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 8 }}
-                    transition={{ duration: 0.15 }}
-                    onClick={next}
-                    className="absolute top-1/2 right-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-white/10 p-2 text-white backdrop-blur-xs transition-all hover:bg-white/25"
-                  >
-                    <svg
-                      className="size-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </motion.button>
-                </>
-              )}
-            </AnimatePresence>
           </div>
 
-          <div className="my-3 flex items-center justify-center gap-3">
-            <div className="flex items-center gap-1.5">
-              {project.images.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrent(i)}
-                  className={`cursor-pointer rounded-full transition-all duration-300 ${
-                    i === current
-                      ? "h-1.5 w-6 bg-black/60 dark:bg-white/60"
-                      : "h-1.5 w-1.5 bg-black/20 hover:bg-black/40 dark:bg-white/20 dark:hover:bg-white/40"
-                  }`}
+          <div className="my-3 flex items-stretch gap-2.5">
+            <Button
+              variant="outline"
+              onClick={prev}
+              aria-label="Previous image"
+              className="h-12 flex-1 rounded-lg border-0 bg-white/70 text-black/60 shadow-sm ring-1 ring-black/10 backdrop-blur-md hover:bg-white hover:text-black dark:text-white/60 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white"
+            >
+              <svg
+                className="size-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 19l-7-7 7-7"
                 />
-              ))}
-            </div>
+              </svg>
+            </Button>
+            <Button
+              variant="outline"
+              onClick={next}
+              aria-label="Next image"
+              className="h-12 flex-1 rounded-lg border-0 bg-white/70 text-black/60 shadow-sm ring-1 ring-black/10 backdrop-blur-md hover:bg-white hover:text-black dark:text-white/60 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white"
+            >
+              <svg
+                className="size-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Button>
           </div>
 
           <p className="text-base leading-relaxed text-black/50 dark:text-white/50">
