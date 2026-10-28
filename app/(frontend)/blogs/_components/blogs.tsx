@@ -2,6 +2,7 @@ import config from "@payload-config";
 import { getPayload } from "payload";
 import Container from "@/components/container";
 import BlogCard from "@/components/blog-card";
+import BlogCardSkeleton from "@/components/blog-card-skeleton";
 
 const BlogsSection = async () => {
   const payload = await getPayload({ config });
@@ -49,6 +50,8 @@ const BlogsSection = async () => {
             createdAt={blog.createdAt}
           />
         ))}
+        {blogs.length === 1 && <BlogCardSkeleton className="hidden md:flex" />}
+        {blogs.length < 3 && <BlogCardSkeleton className="hidden lg:flex" />}
       </div>
     </Container>
   );

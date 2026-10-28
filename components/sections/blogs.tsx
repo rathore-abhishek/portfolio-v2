@@ -5,6 +5,7 @@ import Divider from "../divider";
 import Container from "../container";
 import Share from "../icons/share";
 import BlogCard from "../blog-card";
+import BlogCardSkeleton from "../blog-card-skeleton";
 
 const BlogsSection = async () => {
   const payload = await getPayload({ config });
@@ -56,6 +57,10 @@ const BlogsSection = async () => {
               createdAt={blog.createdAt}
             />
           ))}
+          {blogs.length === 1 && (
+            <BlogCardSkeleton className="hidden md:flex" />
+          )}
+          {blogs.length < 3 && <BlogCardSkeleton className="hidden lg:flex" />}
         </div>
       </Container>
       <Divider />

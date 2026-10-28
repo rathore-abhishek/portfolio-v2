@@ -1,6 +1,7 @@
 "use client";
 
 import ProjectCard from "@/components/project-card";
+import ProjectCardSkeleton from "@/components/project-card-skeleton";
 import NextJS from "@/components/icons/nextjs";
 import TailwindCSS from "@/components/icons/tailwind";
 import TanstackQuery from "@/components/icons/tanstack-query";
@@ -23,8 +24,11 @@ const iconMap: Record<string, ReactNode> = {
 };
 
 const ProjectsSection = () => {
+  const skeletonCount =
+    projectCardData.length <= 2 ? 3 - projectCardData.length : 0;
+
   return (
-    <Container className="px-8">
+    <Container className="flex-1 px-8">
       <div className="mb-8 space-y-2">
         <h2 className="font-serif text-3xl text-black/80 italic dark:text-white/80">
           proof of work
@@ -52,6 +56,9 @@ const ProjectsSection = () => {
               };
             })}
           />
+        ))}
+        {Array.from({ length: skeletonCount }).map((_, i) => (
+          <ProjectCardSkeleton key={`project-skeleton-${i}`} />
         ))}
       </div>
       <h5 className="font-neu mt-4 bg-linear-to-r from-gray-200 via-gray-400 to-gray-600 bg-clip-text py-1 text-center text-3xl font-extrabold whitespace-nowrap text-transparent opacity-30 md:text-6xl">
