@@ -1,9 +1,9 @@
 import config from "@payload-config";
 import { getPayload } from "payload";
-import Link from "next/link";
+// import Link from "next/link";
 import Divider from "../divider";
 import Container from "../container";
-import Share from "../icons/share";
+// import Share from "../icons/share";
 import BlogCard from "../blog-card";
 import BlogCardSkeleton from "../blog-card-skeleton";
 
@@ -33,12 +33,12 @@ const BlogsSection = async () => {
           <h2 className="font-serif text-xl text-black/50 italic dark:text-white/40">
             My Thoughts
           </h2>
-          <Link
+          {/* <Link
             href={"/blogs"}
             className="inline-flex cursor-pointer items-center gap-1 text-xs font-medium text-black/30 transition-colors duration-200 hover:text-black/90 dark:text-white/30 dark:hover:text-white/90"
           >
             ALL <Share />
-          </Link>
+          </Link> */}
         </div>
         <div className="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
           {blogs.map((blog) => (

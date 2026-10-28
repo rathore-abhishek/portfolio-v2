@@ -12,7 +12,8 @@ import Payload from "../icons/payload";
 import Supabase from "../icons/supabase";
 import { projectCardData, techMeta } from "@/data/projects";
 import type { ReactNode } from "react";
-import Share from "../icons/share";
+// import Link from "next/link";
+// import Share from "../icons/share";
 
 const iconMap: Record<string, ReactNode> = {
   nextjs: <NextJS />,
@@ -34,13 +35,13 @@ const ProjectsSection = () => {
         <h2 className="font-serif text-xl text-black/50 dark:text-white/40">
           Proof of work
         </h2>
-        <span
-          aria-disabled="true"
-          className="inline-flex cursor-default items-center gap-1 text-xs font-medium text-black/30 dark:text-white/30"
+        {/* <Link
+          href={"/projects"}
+          className="inline-flex items-center gap-1 text-xs font-medium text-black/30 transition-colors duration-200 hover:text-black/90 dark:text-white/30 dark:hover:text-white/90"
         >
           ALL
           <Share />
-        </span>
+        </Link> */}
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projectCardData.slice(0, 3).map((p) => (
