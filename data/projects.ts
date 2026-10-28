@@ -108,6 +108,7 @@ const details: ProjectDetail[] = [
       github: "https://rathore-abhishek/rvyu",
     },
   },
+  /*
   {
     id: "theleansuite",
     title: "The Leansuite",
@@ -189,6 +190,7 @@ const details: ProjectDetail[] = [
         "https://chromewebstore.google.com/detail/ojlcbfblfbkbfkoffkbfckmooaolpigl",
     },
   },
+  */
 ];
 
 export const projectsData: Record<string, ProjectDetail> = {};
