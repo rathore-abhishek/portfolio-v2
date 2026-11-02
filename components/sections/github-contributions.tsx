@@ -60,7 +60,6 @@ const GithubContributions: React.FC = () => {
           colorScheme={resolvedTheme as "light" | "dark"}
           fontSize={12}
           blockSize={12}
-          year={2026}
           blockRadius={4}
           theme={theme}
           labels={{
